@@ -9,7 +9,7 @@ const Hero = () => {
             {/* ===== VIDEO DI SFONDO PER MOBILE ===== */}
             {/* Sarà visibile solo su schermi piccoli grazie al CSS */}
             <video className={styles.backgroundVideoMobile} autoPlay loop muted playsInline>
-                <source src="/lavori-hero1.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/dyatobm6t/video/upload/v1758551873/lavori.video----11_vqe3qh.mp4" type="video/mp4" />
             </video>
             {/* ======================================= */}
 

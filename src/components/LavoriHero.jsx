@@ -31,7 +31,7 @@ const LavoriHero = () => {
         <section className={styles.lavoriHeroSection}>
             {/* Video di sfondo */}
             <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
-                <source src="/lavori-hero1.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/dyatobm6t/video/upload/v1758551873/lavori.video----11_vqe3qh.mp4" type="video/mp4" />
                 Il tuo browser non supporta il tag video.
             </video>
             <div className={styles.overlay}></div>
