@@ -20,7 +20,7 @@ const Hero = () => {
                 </p>
                 <div className={styles.buttonContainer}>
                     <RouterLink to="/chi-siamo" className="btn btn-primary">Scopri di più &rarr;</RouterLink>
-                    <RouterLink to="/contatti" className="btn btn-secondary">Richiedi Preventivo</RouterLink>
+                    <RouterLink to="/preventivo" className="btn btn-secondary">Richiedi Preventivo</RouterLink>
                 </div>
             </div>
         </section>

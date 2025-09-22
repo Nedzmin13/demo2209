@@ -47,7 +47,7 @@ const Navbar = () => {
                 </nav>
 
                 <div className={styles.headerRightDesktop}>
-                    <a href="/contatti" className="btn btn-primary">Richiedi Preventivo</a>
+                    <a href="/preventivo" className="btn btn-primary">Richiedi Preventivo</a>
                 </div>
 
                 <div className={styles.mobileMenuIcon} onClick={toggleMobileMenu}>

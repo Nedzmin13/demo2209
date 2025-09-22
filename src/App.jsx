@@ -13,6 +13,7 @@ import LavoraConNoi from './pages/LavoraConNoi';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import PaginaImmagini from "./pages/PaginaImmagini.jsx";
 import PaginaVideo from "./pages/PaginaVideo.jsx";
+import Preventivo from "./pages/Preventivo.jsx";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/lavori/immagini" element={<PaginaImmagini />} />
                     <Route path="/lavori/video" element={<PaginaVideo />} />
                     <Route path="/contatti" element={<Contatti />} />
+                    <Route path="/preventivo" element={<Preventivo />} />
                     <Route path="/lavora-con-noi" element={<LavoraConNoi />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 </Routes>
