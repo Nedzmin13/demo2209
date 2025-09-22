@@ -24,8 +24,6 @@ lerna-debug.log*
 .env.*
 !.env.example
 
-# Ignore large media files in the public directory
-/public/*.mp4
-/public/*.jpg
-/public/*.jpeg
-/public/*.png
+
+# Local Netlify folder
+.netlify
