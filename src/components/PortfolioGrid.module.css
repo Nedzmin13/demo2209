@@ -1,0 +1,158 @@
+/* src/components/PortfolioGrid.module.css */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+}
+
+.filterBtn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filterBtn:hover, .filterBtn.active {
+    background-color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
+    color: var(--text-dark);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.header h2 { margin-bottom: 0.5rem; }
+.header p { color: #888; }
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.projectCard {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.yearTag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: var(--light-grey-bg);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: #777;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.description {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+.details div { display: flex; align-items: center; gap: 0.5rem; }
+.details strong { color: var(--text-dark); }
+
+.detailsButton {
+    text-align: center;
+    border: 2px solid var(--primary-yellow);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.detailsButton:hover {
+    background-color: var(--primary-yellow);
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.5rem 1rem;
+    }
+    .projectGrid {
+        grid-template-columns: 1fr; /* Una colonna su mobile */
+    }
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}

@@ -1,0 +1,23 @@
+/* src/components/PageHeader.module.css */
+.pageHeader {
+    background-color: var(--light-grey-bg);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.pageHeader .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}

@@ -1,0 +1,95 @@
+/* src/components/ServicesPreview.module.css */
+.servicesSection {
+    background-color: var(--light-grey-bg);
+}
+
+.header {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+.header h2 {
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: stretch; /* Assicura che le card abbiano la stessa altezza */
+}
+
+/* === MODIFICHE PER L'ALLINEAMENTO INTERNO === */
+.serviceCard {
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* 1. Trasformiamo la card in un contenitore flex verticale */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.serviceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+    font-size: 3rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+
+    /* 2. Diamo un'altezza minima al titolo per occupare sempre lo spazio di 2 righe */
+    min-height: 2.5em;
+
+    /* Centriamo il titolo verticalmente nel suo spazio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3. Questa proprietà dice alla descrizione di crescere e spingere il titolo in alto */
+.serviceCard p {
+    flex-grow: 1;
+}
+/* =========================================== */
+
+.ctaButtonContainer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header h2 {
+        font-size: 2rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    .serviceCard {
+        padding: 2rem 1.5rem;
+    }
+    /* Su mobile, annulliamo la forzatura dell'altezza */
+    .cardTitle {
+        min-height: auto;
+    }
+}

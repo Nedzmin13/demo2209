@@ -1,0 +1,114 @@
+/* src/components/Footer.module.css */
+.footer {
+    background-color: var(--dark-grey);
+    color: var(--text-light);
+    padding-top: 4rem;
+}
+
+.footer p {
+    color: #ccc;
+}
+
+/* --- MODIFICHE PRINCIPALI --- */
+
+/* Questo è il layout di default (per mobile e tablet) che si adatta automaticamente */
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 0;
+}
+
+/* Con questa media query, applichiamo un layout specifico SOLO per schermi grandi (desktop) */
+@media (min-width: 992px) {
+    .footerContainer {
+        /* Definiamo una griglia a 3 colonne dove la prima è più grande (1.5fr) */
+        /* Questo crea un layout più bilanciato e intenzionale */
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 3rem; /* Aumentiamo un po' lo spazio su desktop */
+    }
+}
+
+/* --- FINE MODIFICHE --- */
+
+
+.footerTitle {
+    color: var(--primary-yellow);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footerLinks {
+    list-style: none;
+}
+
+.footerLinks li {
+    margin-bottom: 0.8rem;
+}
+
+.footerLinks a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+    color: var(--primary-yellow);
+}
+
+.footerBottom {
+    border-top: 1px solid #444;
+    padding: 1.5rem 0;
+}
+
+.footerBottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 !important;
+}
+
+.socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socialIcons a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+    color: var(--primary-yellow);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footerBottomLink {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footerBottomLink:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footerContainer {
+        text-align: center;
+    }
+
+    .footerBottomContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,45 @@
+/* src/components/CompanyCulture.module.css */
+/* Stili simili a MissionSection per coerenza, ma con testo diverso */
+.section {
+    background-color: var(--dark-grey);
+    color: var(--text-light);
+    text-align: center;
+}
+.content {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+}
+.content h2 {
+    color: var(--text-light);
+}
+.content p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+.statNumber {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-yellow);
+}
+.statLabel {
+    font-size: 1.1rem;
+    color: #ccc;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

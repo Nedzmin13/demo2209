@@ -1,0 +1,117 @@
+/* src/components/Navbar.module.css */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Stile della Barra Superiore --- */
+.topBar {
+    background-color: #101010;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+}
+
+.topBarContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.topBar a {
+    color: #ecb400;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.topBar a:hover {
+    color: var(--primary-yellow);
+}
+
+/* --- Barra di Navigazione Principale --- */
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Logo --- */
+.logoContainer { display: flex; align-items: center; gap: 10px; }
+.logoImg { height: 50px; }
+.logoText { display: flex; flex-direction: column; line-height: 1.1; font-weight: 800; font-size: 1.2rem; color: var(--text-dark); }
+.subtext { font-size: 0.9rem; font-weight: 500; color: var(--primary-yellow); }
+
+/* --- Navigazione Desktop --- */
+.navLinksDesktop { display: flex; gap: 30px; }
+.navLink { font-weight: 500; padding: 10px 0; position: relative; color: var(--text-dark); transition: color 0.3s ease; }
+
+/* === EFFETTO HOVER E ACTIVE === */
+.navLink:hover,
+.navLink.active {
+    color: var(--primary-yellow);
+}
+/* Rimosso l'effetto underline precedente */
+
+.headerRightDesktop .btn { padding: 10px 20px; }
+
+/* --- Elementi Mobili (Nascosti su Desktop) --- */
+.mobileMenuIcon,
+.mobileMenu {
+    display: none;
+}
+
+/* --- MEDIA QUERY PER RESPONSIVE --- */
+@media (max-width: 992px) {
+    /* Nascondi la barra superiore su mobile */
+    .topBar {
+        display: none;
+    }
+
+    .navLinksDesktop,
+    .headerRightDesktop {
+        display: none;
+    }
+
+    .mobileMenuIcon { display: block; font-size: 2rem; cursor: pointer; }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .mobileMenuOpen { max-height: 600px; padding-bottom: 2rem; }
+    .mobileNavLink { width: 100%; text-align: center; padding: 1.2rem 0; font-size: 1.1rem; font-weight: 500; border-bottom: 1px solid var(--border-color); }
+    .mobileNavLink:first-child { border-top: 1px solid var(--border-color); }
+    .mobileQuoteButton { margin-top: 2rem; width: 80%; }
+}
+
+@media (max-width: 480px) {
+    .navContainer { padding: 0 1rem; }
+    .logoImg { height: 40px; }
+    .logoMainText { font-size: 1rem; }
+    .logoSubText { font-size: 0.6rem; } /* Leggermente più piccolo per stare bene */
+}

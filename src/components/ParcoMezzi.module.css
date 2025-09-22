@@ -1,0 +1,52 @@
+/* src/components/ParcoMezzi.module.css */
+.parcoMezziSection {
+    background-color: var(--light-grey-bg);
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.mezziList {
+    list-style: none; /* Rimuoviamo i bullet point di default */
+    padding: 0;
+    column-count: 3;
+    column-gap: 2rem;
+}
+
+.mezziList li {
+    position: relative; /* Necessario per il bullet point custom */
+    padding-left: 20px; /* Spazio per il bullet point */
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+    break-inside: avoid-column;
+}
+
+/* Creiamo un bullet point stilizzato con il colore giallo del brand */
+.mezziList li::before {
+    content: '■'; /* Puoi usare '•', '■', o '-' */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-yellow);
+    font-size: 1rem;
+}
+
+
+/* La classe .icon non serve più e può essere rimossa */
+
+/* Responsive */
+@media (max-width: 992px) {
+    .mezziList {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .mezziList {
+        column-count: 1;
+    }
+}

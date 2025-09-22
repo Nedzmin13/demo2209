@@ -1,0 +1,57 @@
+/* src/components/OpenPositions.module.css */
+.section {
+    background-color: var(--light-grey-bg);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* === NUOVA GRIGLIA 2x2 === */
+.grid {
+    display: grid;
+    /* Su desktop, 2 colonne */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 800px; /* Larghezza massima per non allargare le card */
+    margin: 0 auto; /* Centra la griglia */
+}
+
+/* Su mobile, torna a una colonna */
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ======================== */
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: var(--primary-yellow);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+.spontaneous {
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 3rem;
+}
+.spontaneous p { margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem; }

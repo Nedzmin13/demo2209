@@ -1,0 +1,134 @@
+/* src/components/Hero.module.css */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+
+    /* Sfondo di default (immagine per desktop) */
+    background-image: url('../assets/sartorelloAI.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Nasconde parti del video che potrebbero sporgere */
+}
+
+/* Video di sfondo per mobile (nascosto di default) */
+.backgroundVideoMobile {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay leggermente più scuro per contrasto con video */
+    z-index: 2; /* Sta sopra al video ma sotto al testo */
+}
+
+.content {
+    position: relative;
+    z-index: 3; /* Sta sopra a tutto */
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.highlight {
+    color: var(--primary-yellow);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.buttonContainer .btn {
+    font-size: 1rem;
+    padding: 14px 32px;
+}
+
+
+/* === MEDIA QUERY PER TABLET E SMARTPHONE === */
+@media (max-width: 768px) {
+    .hero {
+        /* Rimuoviamo l'immagine di sfondo, verrà sostituita dal video */
+        background-image: none;
+    }
+
+    /* Mostriamo il video */
+    .backgroundVideoMobile {
+        display: block;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    .buttonContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 10rem;
+    }
+    .buttonContainer .btn {
+        width: 80%;
+        max-width: 300px;
+        font-size: 1rem;
+        padding: 12px 28px;
+    }
+}
+
+/* === MEDIA QUERY PER SMARTPHONE PICCOLI === */
+@media (max-width: 480px) {
+    .hero {
+        height: 80vh;
+    }
+    .title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    .highlight {
+        display: block;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+    .buttonContainer .btn {
+        width: 90%;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}

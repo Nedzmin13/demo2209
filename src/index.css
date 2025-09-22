@@ -1,0 +1,107 @@
+/* src/index.css */
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* CSS Variables (Color Palette) */
+:root {
+  --primary-yellow: #FFC400; /* Giallo principale, da aggiustare se necessario */
+  --dark-grey: #222222;      /* Sfondo scuro per footer/elementi */
+  --light-grey-bg: #f8f9fa;  /* Sfondo per sezioni chiare */
+  --text-dark: #333333;      /* Testo principale */
+  --text-light: #ffffff;
+  --border-color: #e0e0e0;
+}
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; text-align: center; }
+h3 { font-size: 1.75rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.container {
+  width: 100%; /* Occupiamo tutta la larghezza */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem; /* Usiamo padding invece di width: 90% */
+}
+
+/* Stile base per i bottoni */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-yellow);
+  color: var(--text-dark);
+  border-color: var(--primary-yellow);
+}
+
+.btn-primary:hover {
+  background-color: var(--text-dark);
+  color: var(--primary-yellow);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--primary-yellow);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-yellow);
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+
+  .container {
+    /* Riduciamo il padding su mobile */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

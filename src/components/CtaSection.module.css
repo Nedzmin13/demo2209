@@ -1,0 +1,47 @@
+/* src/components/CtaSection.module.css */
+.ctaSection {
+    background-color: var(--dark-grey);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Usiamo un container specifico per sovrascrivere il padding */
+.ctaContainer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.ctaContainer h2 {
+    color: var(--text-light);
+    font-size: 2.8rem;
+}
+
+.ctaContainer p {
+    color: #ccc;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .ctaContainer h2 {
+        font-size: 2.2rem;
+    }
+    .buttonContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttonContainer .btn {
+        width: 80%;
+        max-width: 350px;
+    }
+}

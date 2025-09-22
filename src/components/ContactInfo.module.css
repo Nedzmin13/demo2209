@@ -1,0 +1,109 @@
+/* src/components/ContactInfo.module.css */
+.contactInfoSection {
+    background-color: var(--light-grey-bg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconWrapper {
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+}
+
+.cardTitle {
+    margin-bottom: 1.5rem;
+}
+
+.cardContent {
+    flex-grow: 1;
+}
+
+.infoLine {
+    margin-bottom: 0.5rem;
+    color: #555;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.infoButton {
+    margin-top: 1.5rem;
+    border: 2px solid var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.infoButton:hover {
+    background-color: var(--primary-yellow);
+}
+
+.scheduleGrid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.scheduleDay {
+    font-weight: 500;
+    color: #333;
+}
+
+.scheduleTime {
+    color: #555;
+}
+
+.emailList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.emailItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.emailLabel {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.emailAddress {
+    font-size: 0.95rem;
+    color: #555;
+    /* Non andare a capo nel mezzo di una parola */
+    word-break: keep-all;
+}

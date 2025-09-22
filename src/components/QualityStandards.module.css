@@ -1,0 +1,45 @@
+/* src/components/QualityStandards.module.css */
+.standardsSection {
+    background-color: var(--light-grey-bg);
+}
+
+.header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+.standardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.standardCard {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--primary-yellow);
+}
+
+.cardHeader h3 {
+    margin-bottom: 0;
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .standardsGrid {
+        grid-template-columns: 1fr;
+    }
+}

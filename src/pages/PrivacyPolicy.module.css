@@ -1,0 +1,28 @@
+/* src/pages/PrivacyPolicy.module.css */
+.policyContent h2 {
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.policyContent h2:first-child {
+    margin-top: 0;
+}
+.policyContent h3 {
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.policyContent p, .policyContent li {
+    line-height: 1.8;
+    color: #555;
+}
+.policyContent ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+.separator {
+    margin: 3rem 0;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}

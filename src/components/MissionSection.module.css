@@ -1,0 +1,50 @@
+/* src/components/MissionSection.module.css */
+.missionSection {
+    background-color: var(--light-grey-bg);
+    text-align: center;
+}
+
+.missionContent {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+}
+
+.missionContent p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statNumber {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-yellow);
+}
+
+.statLabel {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .statNumber {
+        font-size: 3rem;
+    }
+}

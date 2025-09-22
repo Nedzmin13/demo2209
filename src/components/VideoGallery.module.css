@@ -1,0 +1,38 @@
+/* src/components/VideoGallery.module.css */
+.gallerySection {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* === NUOVO LAYOUT A COLONNE === */
+.videoGrid {
+    /* Definiamo il numero di colonne e lo spazio tra di esse */
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+.galleryItem {
+    /* Questo impedisce a un video di essere spezzato tra due colonne */
+    break-inside: avoid-column;
+    margin-bottom: 1.5rem; /* Spazio verticale tra i video nella stessa colonna */
+}
+
+.galleryItem video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* === GESTIONE RESPONSIVE DEL NUMERO DI COLONNE === */
+@media (max-width: 1100px) {
+    .videoGrid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 700px) {
+    .videoGrid {
+        column-count: 1;
+    }
+}

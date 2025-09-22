@@ -1,0 +1,32 @@
+# Dependency directories
+node_modules/
+
+# Vite build output
+dist
+dist-ssr
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# === MEDIA FILES IN PUBLIC ===
+# Ignora tutti i file in /public tranne quelli essenziali
+/public/*
+!/public/favicon.ico
+!/public/robots.txt
+!/public/manifest.json

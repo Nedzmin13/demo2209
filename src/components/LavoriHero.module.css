@@ -1,0 +1,117 @@
+/* src/components/LavoriHero.module.css */
+.lavoriHeroSection {
+    position: relative;
+    padding: 5rem 0;
+    overflow: hidden;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.backgroundVideo {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    filter: saturate(1.1) contrast(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.contentContainer {
+    position: relative;
+    z-index: 3;
+}
+
+.header {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: stretch; /* Assicura che le card abbiano la stessa altezza */
+}
+
+/* === MODIFICHE CHIAVE PER L'ALLINEAMENTO INTERNO === */
+.card {
+    /* Sfondo bianco quasi invisibile, l'effetto principale è dato dal blur */
+    background-color: rgba(255, 255, 255, 0.01); /* Da 0.1 a 0.05 */
+
+    /* Bordo ancora più sottile e meno visibile */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Da 0.2 a 0.1 */
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.iconWrapper {
+    font-size: 3rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem; /* Aumentato leggermente il margine */
+
+    /* 2. Diamo un'altezza minima al titolo per occupare sempre lo spazio di 2 righe */
+    min-height: 2.5em; /* 1.25em per riga * 2 righe */
+
+    /* Centriamo il titolo verticalmente nel suo spazio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    color: #ddd;
+    /* 3. Questa proprietà dice alla descrizione di non crescere e rimanere dov'è */
+    flex-grow: 0;
+}
+/* =========================================== */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    /* Su mobile, non serve forzare l'altezza del titolo */
+    .card h3 {
+        min-height: auto;
+    }
+}
