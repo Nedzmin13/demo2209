@@ -11,6 +11,8 @@ import Lavori from './pages/Lavori';
 import Contatti from './pages/Contatti';
 import LavoraConNoi from './pages/LavoraConNoi';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import PaginaImmagini from "./pages/PaginaImmagini.jsx";
+import PaginaVideo from "./pages/PaginaVideo.jsx";
 
 function App() {
     return (
@@ -23,6 +25,8 @@ function App() {
                     <Route path="/chi-siamo" element={<ChiSiamo />} />
                     <Route path="/certificazioni" element={<Certificazioni />} />
                     <Route path="/lavori" element={<Lavori />} />
+                    <Route path="/lavori/immagini" element={<PaginaImmagini />} />
+                    <Route path="/lavori/video" element={<PaginaVideo />} />
                     <Route path="/contatti" element={<Contatti />} />
                     <Route path="/lavora-con-noi" element={<LavoraConNoi />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
