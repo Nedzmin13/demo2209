@@ -2,8 +2,8 @@
 import React from 'react';
 import styles from './VideoGallery.module.css';
 
-const VIDEO_COUNT = 11;
-const videos = Array.from({ length: VIDEO_COUNT }, (_, i) => `/lavori.video--${i + 1}.mp4`);
+const VIDEO_COUNT = 12;
+const videos = Array.from({ length: VIDEO_COUNT }, (_, i) => `/lavori.video----${i + 1}.mp4`);
 
 const VideoGallery = () => {
     if (VIDEO_COUNT === 0) { return null; }

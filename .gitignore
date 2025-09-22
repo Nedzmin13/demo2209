@@ -24,9 +24,8 @@ lerna-debug.log*
 .env.*
 !.env.example
 
-# === MEDIA FILES IN PUBLIC ===
-# Ignora tutti i file in /public tranne quelli essenziali
-/public/*
-!/public/favicon.ico
-!/public/robots.txt
-!/public/manifest.json
+# Ignore large media files in the public directory
+/public/*.mp4
+/public/*.jpg
+/public/*.jpeg
+/public/*.png
