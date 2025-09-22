@@ -1,29 +1,26 @@
 // src/components/Hero.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import styles from './Hero.module.css';
 
 const Hero = () => {
     return (
         <section className={styles.hero}>
-            {/* ===== VIDEO DI SFONDO PER MOBILE ===== */}
-            {/* Sarà visibile solo su schermi piccoli grazie al CSS */}
-            <video className={styles.backgroundVideoMobile} autoPlay loop muted playsInline>
-                <source src="https://res.cloudinary.com/dyatobm6t/video/upload/v1758551873/lavori.video----11_vqe3qh.mp4" type="video/mp4" />
-            </video>
-            {/* ======================================= */}
-
+            {/* Il video di sfondo per mobile è stato rimosso */}
             <div className={styles.overlay}></div>
             <div className={styles.content}>
-
+                <h1 className={styles.title}>
+                    SARTORELLO <span className={styles.highlight}>ESCAVAZIONI</span>
+                </h1>
                 <p className={styles.subtitle}>
-                    La nostra esperienza decennale in scavi, movimento terra, demolizioni e opere&nbsp;stradali.
+                    La nostra esperienza decennale in <strong>scavi, movimento terra, demolizioni e opere&nbsp;stradali</strong>.
                     <br />
                     Professionalità e precisione al servizio del tuo cantiere.
                 </p>
                 <div className={styles.buttonContainer}>
-                    <Link to="/chi-siamo" className="btn btn-primary">Scopri di più &rarr;</Link>
-                    <Link to="/contatti" className="btn btn-secondary">Richiedi Preventivo</Link>
+                    <RouterLink to="/chi-siamo" className="btn btn-primary">Scopri di più &rarr;</RouterLink>
+                    <RouterLink to="/contatti" className="btn btn-secondary">Richiedi Preventivo</RouterLink>
                 </div>
             </div>
         </section>
