@@ -63,7 +63,7 @@ const Navbar = () => {
                 <NavLink to="/lavori" onClick={closeMobileMenu} className={styles.mobileNavLink}>Lavori</NavLink>
                 <NavLink to="/contatti" onClick={closeMobileMenu} className={styles.mobileNavLink}>Contatti</NavLink>
                 <NavLink to="/lavora-con-noi" onClick={closeMobileMenu} className={styles.mobileNavLink}>Lavora con noi</NavLink>
-                <a href="/contatti" onClick={closeMobileMenu} className={`${styles.mobileQuoteButton} btn btn-primary`}>
+                <a href="/preventivo" onClick={closeMobileMenu} className={`${styles.mobileQuoteButton} btn btn-primary`}>
                     Richiedi Preventivo
                 </a>
             </div>
