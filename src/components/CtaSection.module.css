@@ -1,11 +1,9 @@
-/* src/components/CtaSection.module.css */
 .ctaSection {
     background-color: var(--dark-grey);
     color: var(--text-light);
     text-align: center;
 }
 
-/* Usiamo un container specifico per sovrascrivere il padding */
 .ctaContainer {
     padding-top: 5rem;
     padding-bottom: 5rem;

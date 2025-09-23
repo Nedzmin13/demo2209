@@ -1,8 +1,7 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop'; // <-- 1. IMPORTA IL COMPONENTE
+import ScrollToTop from './components/ScrollToTop';
 
 import Home from './pages/Home';
 import ChiSiamo from './pages/ChiSiamo';
@@ -18,7 +17,7 @@ import Preventivo from "./pages/Preventivo.jsx";
 function App() {
     return (
         <Router>
-            <ScrollToTop /> {/* <-- 2. INSERISCI IL COMPONENTE QUI */}
+            <ScrollToTop />
             <Navbar />
             <main>
                 <Routes>

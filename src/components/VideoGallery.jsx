@@ -1,4 +1,3 @@
-// src/components/VideoGallery.jsx
 import React from 'react';
 import styles from './VideoGallery.module.css';
 
@@ -11,7 +10,6 @@ const VideoGallery = () => {
     return (
         <section className={`${styles.gallerySection} container`}>
             <h2>Galleria Video</h2>
-            {/* Un semplice div che useremo come contenitore per le colonne */}
             <div className={styles.videoGrid}>
                 {videos.map((src, index) => (
                     <div key={index} className={styles.galleryItem}>

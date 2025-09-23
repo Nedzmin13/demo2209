@@ -1,4 +1,3 @@
-// src/components/LavoriHero.jsx
 import React from 'react';
 import styles from './LavoriHero.module.css';
 import { TbTruck, TbBuildingSkyscraper, TbRoad, TbSwitchHorizontal } from 'react-icons/tb';
@@ -20,7 +19,7 @@ const services = [
         description: 'Costruzione di sottofondi, posa di fognature, urbanizzazioni e preparazione per l\'edilizia stradale.',
     },
     {
-        icon: <TbSwitchHorizontal />, // Icona che rappresenta il trasporto/scambio
+        icon: <TbSwitchHorizontal />,
         title: 'Trasporto Conto Terzi',
         description: 'Grazie a Sartorello Trasporti Srl, offriamo un servizio specializzato di trasporto merci e materiali per cantieri.',
     },
@@ -29,16 +28,13 @@ const services = [
 const LavoriHero = () => {
     return (
         <section className={styles.lavoriHeroSection}>
-            {/* Video di sfondo */}
             <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
                 <source src="https://res.cloudinary.com/dyatobm6t/video/upload/v1758551873/lavori.video----11_vqe3qh.mp4" type="video/mp4" />
                 Il tuo browser non supporta il tag video.
             </video>
             <div className={styles.overlay}></div>
 
-            {/* Contenuto sopra al video */}
             <div className={`${styles.contentContainer} container`}>
-                {/* Header della pagina */}
                 <div className={styles.header}>
                     <h1>I Nostri Lavori</h1>
                     <p>Una selezione dei progetti più significativi realizzati negli ultimi anni. Ogni lavoro rappresenta il nostro impegno verso qualità e professionalità.</p>

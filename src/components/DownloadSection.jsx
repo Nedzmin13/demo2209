@@ -1,4 +1,3 @@
-// src/components/DownloadSection.jsx
 import React from 'react';
 import styles from './DownloadSection.module.css';
 import { FaDownload } from 'react-icons/fa';

@@ -1,4 +1,3 @@
-/* src/components/ContactInfo.module.css */
 .contactInfoSection {
     background-color: var(--light-grey-bg);
 }
@@ -104,6 +103,5 @@
 .emailAddress {
     font-size: 0.95rem;
     color: #555;
-    /* Non andare a capo nel mezzo di una parola */
     word-break: keep-all;
 }

@@ -1,4 +1,3 @@
-/* src/components/EmergencySection.module.css */
 .section {
     background-color: var(--dark-grey);
     color: var(--text-light);
@@ -28,7 +27,7 @@
     background-color: var(--primary-yellow);
     color: var(--text-dark);
     padding: 14px 28px;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     font-weight: 700;
     font-size: 1.1rem;
     transition: all 0.3s ease;

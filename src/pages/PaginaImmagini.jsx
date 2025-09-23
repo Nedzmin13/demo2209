@@ -1,6 +1,5 @@
-// src/pages/PaginaImmagini.jsx
 import React, { useState } from 'react';
-import { Title, Meta } from 'react-head'; // CORREZIONE: Importa Title e Meta
+import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';
 import styles from '../components/ImageGallery.module.css';
 import Lightbox from "yet-another-react-lightbox";

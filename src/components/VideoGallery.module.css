@@ -1,4 +1,3 @@
-/* src/components/VideoGallery.module.css */
 .gallerySection {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -6,15 +5,13 @@
 
 /* === NUOVO LAYOUT A COLONNE === */
 .videoGrid {
-    /* Definiamo il numero di colonne e lo spazio tra di esse */
     column-count: 3;
     column-gap: 1.5rem;
 }
 
 .galleryItem {
-    /* Questo impedisce a un video di essere spezzato tra due colonne */
     break-inside: avoid-column;
-    margin-bottom: 1.5rem; /* Spazio verticale tra i video nella stessa colonna */
+    margin-bottom: 1.5rem;
 }
 
 .galleryItem video {

@@ -1,8 +1,7 @@
-// src/pages/Preventivo.jsx
 import React from 'react';
 import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';
-import ContactForm from '../components/ContactForm'; // Useremo un componente dedicato
+import ContactForm from '../components/ContactForm';
 
 const Preventivo = () => {
     return (
@@ -15,7 +14,6 @@ const Preventivo = () => {
                 subtitle="Descrivici il tuo progetto e ti forniremo una valutazione dettagliata e senza impegno nel più breve tempo possibile."
             />
 
-            {/* Contenitore per centrare il form */}
             <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
                 <ContactForm />
             </div>

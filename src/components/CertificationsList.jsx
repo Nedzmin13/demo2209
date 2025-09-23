@@ -1,9 +1,7 @@
-// src/components/CertificationsList.jsx
 import React from 'react';
 import styles from './CertificationsList.module.css';
 import { FaCheckCircle, FaStar, FaAward } from 'react-icons/fa';
 
-// Dati presi direttamente dai tuoi PDF
 const certifications = [
     {
         icon: <FaCheckCircle />,
@@ -11,7 +9,7 @@ const certifications = [
         subtitle: 'SISTEMA DI GESTIONE DELLA QUALITÀ',
         description: 'Certificazione che attesta la conformità del nostro sistema di gestione alla norma per la qualità, garantendo efficienza e miglioramento continuo.',
         validity: 'Valida fino al 01/10/2026',
-        pdfLink: '/certificato-iso-9001.pdf' // Link al file in /public
+        pdfLink: '/certificato-iso-9001.pdf'
     },
     {
         icon: <FaAward />,
@@ -19,7 +17,7 @@ const certifications = [
         subtitle: 'QUALIFICAZIONE LAVORI PUBBLICI',
         description: 'Attestazione di qualificazione all\'esecuzione di lavori pubblici, rilasciata ai sensi del D.P.R. 207/2010.',
         validity: 'Valida fino al 30/09/2026',
-        pdfLink: '/attestazione-soa.pdf' // Link al file in /public
+        pdfLink: '/attestazione-soa.pdf'
     },
 ];
 

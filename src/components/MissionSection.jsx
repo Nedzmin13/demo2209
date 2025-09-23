@@ -1,4 +1,3 @@
-// src/components/MissionSection.jsx
 import React from 'react';
 import styles from './MissionSection.module.css';
 

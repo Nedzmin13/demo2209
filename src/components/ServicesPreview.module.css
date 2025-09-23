@@ -1,4 +1,3 @@
-/* src/components/ServicesPreview.module.css */
 .servicesSection {
     background-color: var(--light-grey-bg);
 }
@@ -23,7 +22,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
-    align-items: stretch; /* Assicura che le card abbiano la stessa altezza */
+    align-items: stretch;
 }
 
 /* === MODIFICHE PER L'ALLINEAMENTO INTERNO === */
@@ -58,20 +57,16 @@
     margin-bottom: 1rem;
     color: var(--text-dark);
 
-    /* 2. Diamo un'altezza minima al titolo per occupare sempre lo spazio di 2 righe */
     min-height: 2.5em;
 
-    /* Centriamo il titolo verticalmente nel suo spazio */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 3. Questa proprietà dice alla descrizione di crescere e spingere il titolo in alto */
 .serviceCard p {
     flex-grow: 1;
 }
-/* =========================================== */
 
 .ctaButtonContainer {
     margin-top: 3rem;
@@ -88,7 +83,6 @@
     .serviceCard {
         padding: 2rem 1.5rem;
     }
-    /* Su mobile, annulliamo la forzatura dell'altezza */
     .cardTitle {
         min-height: auto;
     }

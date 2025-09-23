@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../assets/logo.png';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'; // Icone per la barra superiore
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

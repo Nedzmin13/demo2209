@@ -1,4 +1,3 @@
-// src/components/QualityStandards.jsx
 import React from 'react';
 import styles from './QualityStandards.module.css';
 import { FaCheckCircle, FaUserShield, FaLeaf, FaChalkboardTeacher } from 'react-icons/fa';

@@ -1,4 +1,3 @@
-// src/components/GalleryLinks.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './GalleryLinks.module.css';
@@ -10,7 +9,6 @@ const GalleryLinks = () => {
             <Link to="/lavori/immagini" className={styles.card}>
                 <FaImages className={styles.icon} />
                 <h2>Galleria Immagini</h2>
-                {/* Aggiunto <br /> per forzare l'interruzione di riga */}
                 <p>Esplora le foto dei nostri cantieri e delle<br />nostre realizzazioni.</p>
                 <span className={styles.button}>Vedi le foto &rarr;</span>
             </Link>

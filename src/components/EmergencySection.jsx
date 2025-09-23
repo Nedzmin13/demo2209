@@ -1,4 +1,3 @@
-// src/components/EmergencySection.jsx
 import React from 'react';
 import styles from './EmergencySection.module.css';
 import { FaPhoneAlt } from 'react-icons/fa';

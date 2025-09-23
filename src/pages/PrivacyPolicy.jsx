@@ -1,4 +1,3 @@
-// src/pages/PrivacyPolicy.jsx
 import React from 'react';
 import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';

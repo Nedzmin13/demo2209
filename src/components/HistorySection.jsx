@@ -1,4 +1,3 @@
-// src/components/HistorySection.jsx
 import React from 'react';
 import styles from './HistorySection.module.css';
 import parcoMezzi from '../assets/parco-mezzi.jpg';

@@ -1,4 +1,3 @@
-// src/components/ValuesSection.jsx
 import React from 'react';
 import styles from './ValuesSection.module.css';
 import { FaAward, FaUsers, FaShieldAlt, FaClock } from 'react-icons/fa';
@@ -11,7 +10,6 @@ const values = [
 ];
 
 const ValuesSection = () => {
-    // ... il resto del componente rimane invariato
     return (
         <section className={`${styles.valuesSection} container`}>
             <div className={styles.header}>

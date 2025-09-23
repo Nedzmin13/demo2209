@@ -1,4 +1,3 @@
-/* src/components/Footer.module.css */
 .footer {
     background-color: var(--dark-grey);
     color: var(--text-light);
@@ -9,9 +8,7 @@
     color: #ccc;
 }
 
-/* --- MODIFICHE PRINCIPALI --- */
 
-/* Questo è il layout di default (per mobile e tablet) che si adatta automaticamente */
 .footerContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -20,17 +17,14 @@
     padding-top: 0;
 }
 
-/* Con questa media query, applichiamo un layout specifico SOLO per schermi grandi (desktop) */
 @media (min-width: 992px) {
     .footerContainer {
-        /* Definiamo una griglia a 3 colonne dove la prima è più grande (1.5fr) */
-        /* Questo crea un layout più bilanciato e intenzionale */
+
         grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 3rem; /* Aumentiamo un po' lo spazio su desktop */
+        gap: 3rem;
     }
 }
 
-/* --- FINE MODIFICHE --- */
 
 
 .footerTitle {

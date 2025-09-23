@@ -1,4 +1,3 @@
-// src/components/WhyUsSection.jsx
 import React from 'react';
 import styles from './WhyUsSection.module.css';
 import { FaGraduationCap, FaHeart, FaShieldAlt, FaUsers } from 'react-icons/fa';

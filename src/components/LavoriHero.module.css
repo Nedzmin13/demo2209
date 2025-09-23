@@ -1,4 +1,3 @@
-/* src/components/LavoriHero.module.css */
 .lavoriHeroSection {
     position: relative;
     padding: 5rem 0;
@@ -49,15 +48,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    align-items: stretch; /* Assicura che le card abbiano la stessa altezza */
+    align-items: stretch;
 }
 
-/* === MODIFICHE CHIAVE PER L'ALLINEAMENTO INTERNO === */
 .card {
-    /* Sfondo bianco quasi invisibile, l'effetto principale è dato dal blur */
     background-color: rgba(255, 255, 255, 0.01); /* Da 0.1 a 0.05 */
 
-    /* Bordo ancora più sottile e meno visibile */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Da 0.2 a 0.1 */
 
     backdrop-filter: blur(10px);
@@ -84,12 +80,10 @@
 .card h3 {
     color: #fff;
     font-size: 1.25rem;
-    margin-bottom: 1rem; /* Aumentato leggermente il margine */
+    margin-bottom: 1rem;
 
-    /* 2. Diamo un'altezza minima al titolo per occupare sempre lo spazio di 2 righe */
-    min-height: 2.5em; /* 1.25em per riga * 2 righe */
+    min-height: 2.5em;
 
-    /* Centriamo il titolo verticalmente nel suo spazio */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,12 +91,9 @@
 
 .card p {
     color: #ddd;
-    /* 3. Questa proprietà dice alla descrizione di non crescere e rimanere dov'è */
     flex-grow: 0;
 }
-/* =========================================== */
 
-/* Responsive */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2.5rem;
@@ -110,7 +101,6 @@
     .header p {
         font-size: 1rem;
     }
-    /* Su mobile, non serve forzare l'altezza del titolo */
     .card h3 {
         min-height: auto;
     }

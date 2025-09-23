@@ -1,4 +1,3 @@
-// src/components/ContactInfo.jsx
 import React from 'react';
 import styles from './ContactInfo.module.css';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
@@ -25,7 +24,6 @@ const infoItems = [
         icon: <FaEnvelope />,
         title: 'Email',
         lines: [
-            // --- RIMOSSI I CARATTERI \u200B DA QUI ---
             { label: 'E-mail:', address: 'sartorello@sartorelloescavazioni.com' },
             { label: 'Amministrazione:', address: 'amministrazione@sartorelloescavazioni.com' },
             { label: 'Ufficio tecnico:', address: 'geometri@sartorelloescavazioni.com' }

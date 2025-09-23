@@ -1,8 +1,6 @@
-// src/components/ServicesPreview.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ServicesPreview.module.css';
-// --- ECCO LA CORREZIONE ---
 import { TbTruck, TbBuildingSkyscraper, TbRoad, TbSwitchHorizontal } from 'react-icons/tb';
 
 const services = [
@@ -22,7 +20,7 @@ const services = [
         description: 'Costruzione di sottofondi, posa di fognature, urbanizzazioni e preparazione per l\'edilizia stradale.',
     },
     {
-        icon: <TbSwitchHorizontal />, // Icona che rappresenta il trasporto/scambio
+        icon: <TbSwitchHorizontal />,
         title: 'Trasporto Conto Terzi',
         description: 'Grazie a Sartorello Trasporti Srl, offriamo un servizio specializzato di trasporto merci e materiali per cantieri.',
     },

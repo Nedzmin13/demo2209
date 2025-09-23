@@ -1,6 +1,5 @@
-// src/components/Footer.jsx
 import React from 'react';
-import { Link } from 'react-router-dom'; // Assicurati che Link sia importato
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
@@ -8,7 +7,6 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={`${styles.footerContainer} container`}>
-                {/* ...Le altre colonne del footer rimangono invariate... */}
                 <div className={styles.footerColumn}>
                     <h4 className={styles.footerTitle}>SARTORELLO ESCAVAZIONI SRL</h4>
                     <p>
@@ -49,7 +47,6 @@ const Footer = () => {
                         <a href="https://www.instagram.com/sartorelloescavazionitrasporti/" target="_blank"><FaInstagram /></a>
                         <a href="https://www.linkedin.com/company/sartorello-escavazioni-s.r.l./" target="_blank"><FaLinkedin /></a>
                     </div>
-                    {/* ===== SEZIONE COPYRIGHT AGGIORNATA ===== */}
                     <div className={styles.copyright}>
                         © 2025 Sartorello Escavazioni SRL. Tutti i diritti riservati. P.IVA: 03464770241 -
                         <Link to="/privacy-policy" className={styles.footerBottomLink}>Privacy Policy</Link> -

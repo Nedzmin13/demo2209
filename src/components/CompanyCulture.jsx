@@ -1,4 +1,3 @@
-// src/components/CompanyCulture.jsx
 import React from 'react';
 import styles from './CompanyCulture.module.css';
 

@@ -1,4 +1,3 @@
-/* src/components/Hero.module.css */
 .hero {
     position: relative;
     height: 90vh;
@@ -8,7 +7,6 @@
     text-align: center;
     color: var(--text-light);
 
-    /* Sfondo di default (immagine per desktop) */
     background-image: url('../assets/sartorelloAI.jpg');
     background-size: cover;
     background-position: center;
@@ -30,7 +28,6 @@
     padding: 0 20px;
 }
 
-/* ... stili per title, highlight, subtitle, buttonContainer ... */
 .title { font-size: 4.5rem; font-weight: 800; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
 .highlight { color: var(--primary-yellow); }
 .subtitle { font-size: 1.25rem; margin-bottom: 2.5rem; line-height: 1.7; color: #f0f0f0; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
@@ -38,11 +35,9 @@
 .buttonContainer .btn { font-size: 1rem; padding: 14px 32px; }
 
 
-/* === MEDIA QUERY PER TABLET E SMARTPHONE === */
 @media (max-width: 768px) {
     .hero {
         height: 75vh;
-        /* RIPRISTINIAMO L'IMMAGINE OTTIMIZZATA PER MOBILE */
         background-image: url('../assets/hero-mobile.jpg');
     }
 

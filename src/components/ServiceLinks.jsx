@@ -1,4 +1,3 @@
-// src/components/ServiceLinks.jsx
 import React from 'react';
 import styles from './ServiceLinks.module.css';
 import { FaTruckMoving, FaBuilding, FaLeaf, FaHome } from 'react-icons/fa';

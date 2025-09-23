@@ -1,9 +1,6 @@
-// src/components/ParcoMezzi.jsx
 import React from 'react';
 import styles from './ParcoMezzi.module.css';
-// L'import delle icone è stato rimosso
 
-// Torniamo a un semplice array di stringhe
 const mezzi = [
     "3 escavatori cingolati 360 q.li",
     "5 escavatori cingolati 250 q.li",
@@ -26,7 +23,6 @@ const mezzi = [
     "5 FURGONI ATTREZZATI 35 q.li"
 ];
 
-// La funzione getIconForType è stata rimossa
 
 const ParcoMezzi = () => {
     return (
@@ -39,7 +35,6 @@ const ParcoMezzi = () => {
                 <ul className={styles.mezziList}>
                     {mezzi.map((mezzo, index) => (
                         <li key={index}>
-                            {/* L'icona è stata rimossa da qui */}
                             <span>{mezzo}</span>
                         </li>
                     ))}

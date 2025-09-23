@@ -1,11 +1,10 @@
-/* src/components/GalleryLinks.module.css */
 .galleryLinksSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
-    align-items: stretch; /* Assicura che le card siano alte uguali */
+    align-items: stretch;
 }
 
 .card {

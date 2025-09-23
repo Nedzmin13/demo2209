@@ -1,14 +1,13 @@
-/* src/index.css */
 
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* CSS Variables (Color Palette) */
 :root {
-  --primary-yellow: #FFC400; /* Giallo principale, da aggiustare se necessario */
-  --dark-grey: #222222;      /* Sfondo scuro per footer/elementi */
-  --light-grey-bg: #f8f9fa;  /* Sfondo per sezioni chiare */
-  --text-dark: #333333;      /* Testo principale */
+  --primary-yellow: #FFC400;
+  --dark-grey: #222222;
+  --light-grey-bg: #f8f9fa;
+  --text-dark: #333333;
   --text-light: #ffffff;
   --border-color: #e0e0e0;
 }
@@ -49,10 +48,10 @@ a {
 }
 
 .container {
-  width: 100%; /* Occupiamo tutta la larghezza */
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem; /* Usiamo padding invece di width: 90% */
+  padding: 4rem 2rem;
 }
 
 /* Stile base per i bottoni */
@@ -98,7 +97,6 @@ a {
   h3 { font-size: 1.4rem; }
 
   .container {
-    /* Riduciamo il padding su mobile */
     padding-top: 3rem;
     padding-bottom: 3rem;
     padding-left: 1rem;

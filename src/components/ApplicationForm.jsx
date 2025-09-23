@@ -1,4 +1,3 @@
-// src/components/ApplicationForm.jsx
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './ApplicationForm.module.css';
@@ -37,7 +36,7 @@ const ApplicationForm = () => {
                     <p>Compila il form con i tuoi dati. Se desideri, puoi caricare il tuo CV su un servizio come Google Drive o Dropbox e incollare qui il link di condivisione.</p>
                 </div>
                 <form ref={form} onSubmit={sendEmail} className={styles.form}>
-                    {/* ...Tutti i campi del form (Nome, Telefono, Email, etc.) rimangono invariati... */}
+
                     <div className={styles.formRow}>
                         <div className={styles.formGroup}><label htmlFor="app-name">Nome e Cognome *</label><input type="text" id="app-name" name="name" required /></div>
                         <div className={styles.formGroup}><label htmlFor="app-phone">Telefono *</label><input type="tel" id="app-phone" name="phone" required /></div>
@@ -71,17 +70,17 @@ const ApplicationForm = () => {
                     {submitStatus === 'error' && <p className={styles.errorMessage}>Si è verificato un errore. Riprova.</p>}
                 </form>
 
-                {/* === NUOVA SEZIONE AGGIUNTA === */}
+
                 <div className={styles.alternativeOption}>
                     <p>In alternativa, inviaci direttamente il tuo CV via email:</p>
                     <a
                         href="mailto:sartorello@sartorelloescavazioni.com?subject=Candidatura Spontanea"
-                        className={styles.emailButton} // Rimosse le classi 'btn' e 'btn-secondary'
+                        className={styles.emailButton}
                     >
                         <FaEnvelope/> Invia Email con CV
                     </a>
                 </div>
-                {/* ============================== */}
+
 
                 <small className={styles.gdprNote}>* Campi obbligatori.</small>
             </div>

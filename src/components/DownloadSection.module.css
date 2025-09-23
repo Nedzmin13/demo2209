@@ -1,4 +1,3 @@
-/* src/components/DownloadSection.module.css */
 .downloadSection {
     background-color: var(--dark-grey);
     color: var(--text-light);
@@ -30,7 +29,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* Stile specifico per i bottoni con icona */
 .buttonContainer .btn {
     display: flex;
     align-items: center;

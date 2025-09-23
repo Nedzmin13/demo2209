@@ -1,8 +1,7 @@
-// src/components/OpenPositions.jsx
 import React from 'react';
 import styles from './OpenPositions.module.css';
-import { FaEnvelope } from 'react-icons/fa'; // Importa l'icona
-import { Link as ScrollLink } from 'react-scroll'; // Importa per lo scroll
+import { FaEnvelope } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
 
 const positions = [
     'Escavatorista',
@@ -27,7 +26,6 @@ const OpenPositions = () => {
                     ))}
                 </div>
 
-                {/* === SEZIONE "SPONTANEOUS" MODIFICATA === */}
                 <div className={styles.spontaneous}>
                     <p>Invia la tua candidatura compilando il form sottostante.</p>
                     <ScrollLink
@@ -52,7 +50,6 @@ const OpenPositions = () => {
                         <FaEnvelope /> Invia Email con CV
                     </a>
                 </div>
-                {/* ======================================= */}
 
             </div>
         </section>
