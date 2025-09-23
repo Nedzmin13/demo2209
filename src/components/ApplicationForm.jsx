@@ -5,7 +5,6 @@ import styles from './ApplicationForm.module.css';
 import { FaPaperPlane, FaUpload } from 'react-icons/fa';
 
 function ApplicationForm() {
-    // Il 'key' è l'ID del tuo form
     const [state, handleSubmit] = useForm("xpwyzqln");
 
     if (state.succeeded) {
@@ -65,7 +64,8 @@ function ApplicationForm() {
                         {state.submitting ? 'Invio in corso...' : <><FaPaperPlane /> Invia Candidatura</>}
                     </button>
 
-                    {state.errors.length > 0 && !state.errors.find(e => e.field === 'upload') && (
+                    {/* === CODICE CORRETTO CON CONTROLLO DI SICUREZZA === */}
+                    {state.errors && state.errors.length > 0 && !state.errors.find(e => e.field === 'upload') && (
                         <p className={styles.errorMessage}>Si è verificato un errore. Controlla i dati e riprova.</p>
                     )}
                 </form>
