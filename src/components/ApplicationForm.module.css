@@ -41,18 +41,19 @@
     background-color: #fafafa;
 }
 .uploadBox svg { font-size: 2rem; margin-bottom: 0.5rem; color: var(--primary-yellow); }
-.uploadBox p { margin-bottom: 0.25rem; font-weight: 500; color: #555; }
+.uploadBox p { margin-bottom: 0.25rem; font-weight: 500; color: #555; min-height: 1.2em; }
 
+/* Nascondiamo l'input di default, è brutto e poco funzionale */
 .fileInput {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 0.1px;
+    height: 0.1px;
     opacity: 0;
-    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
+/* Stilizziamo la label per farla sembrare un pulsante */
 .uploadButton {
     display: inline-block;
     margin-top: 1rem;

@@ -14,7 +14,6 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import PaginaImmagini from "./pages/PaginaImmagini.jsx";
 import PaginaVideo from "./pages/PaginaVideo.jsx";
 import Preventivo from "./pages/Preventivo.jsx";
-import ThankYou from "./pages/ThankYou.jsx";
 
 function App() {
     return (
@@ -33,7 +32,6 @@ function App() {
                     <Route path="/preventivo" element={<Preventivo />} />
                     <Route path="/lavora-con-noi" element={<LavoraConNoi />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                    <Route path="/thank-you" element={<ThankYou />} />
                 </Routes>
             </main>
             <Footer />

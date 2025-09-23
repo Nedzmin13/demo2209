@@ -1,23 +1,35 @@
 // src/components/ApplicationForm.jsx
-import React from 'react';
+import React, { useState } from 'react'; // Importa useState
 import styles from './ApplicationForm.module.css';
 import { FaPaperPlane, FaUpload } from 'react-icons/fa';
 
 const ApplicationForm = () => {
+    // Stato per memorizzare il nome del file selezionato
+    const [fileName, setFileName] = useState('');
+
+    // Funzione che si attiva quando l'utente seleziona un file
+    const handleFileChange = (event) => {
+        if (event.target.files.length > 0) {
+            setFileName(event.target.files[0].name);
+        } else {
+            setFileName('');
+        }
+    };
+
     return (
         <section id="application-form" className={`${styles.section} container`}>
             <div className={styles.formWrapper}>
                 <div className={styles.header}>
                     <h2>Candidati Ora</h2>
-                    <p>Compila il form sottostante per inviarci la tua candidatura. Allega il tuo CV e raccontaci perché vorresti lavorare con noi.</p>
+                    <p>Compila il form sottostante per inviarci la tua candidatura...</p>
                 </div>
                 <form
                     name="candidatura"
                     method="POST"
                     data-netlify="true"
-                    data-netlify-honeypot="bot-field" // Anti-spam
+                    data-netlify-honeypot="bot-field"
                     encType="multipart/form-data"
-                    action="/thank-you" // Pagina di ringraziamento (opzionale ma consigliato)
+                    action="/thank-you.html"
                 >
                     <input type="hidden" name="form-name" value="candidatura" />
                     <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
@@ -40,21 +52,34 @@ const ApplicationForm = () => {
                     </div>
                     <div className={styles.formGroup}><label htmlFor="presentation">Presentazione *</label><textarea id="presentation" name="presentation" rows="5" required></textarea></div>
 
+                    {/* === BLOCCO UPLOAD MODIFICATO E CORRETTO === */}
                     <div className={styles.formGroup}>
-                        <label>Carica il tuo CV</label>
+                        <label htmlFor="cv-upload">Carica il tuo CV (Opzionale)</label>
                         <div className={styles.uploadBox}>
                             <FaUpload />
-                            <p>Trascina qui il tuo CV o clicca per selezionare</p>
+                            {/* Mostra il nome del file selezionato o il testo di default */}
+                            <p>{fileName || 'Trascina qui il tuo CV o clicca per selezionare'}</p>
                             <small>PDF, DOC, DOCX (max 5MB)</small>
-                            <input type="file" name="cv" className={styles.fileInput}/>
-                            <button type="button" className={styles.uploadButton}>Seleziona File</button>
+                            <input
+                                type="file"
+                                id="cv-upload" // ID per collegare la label
+                                name="cv"
+                                className={styles.fileInput}
+                                onChange={handleFileChange} // Chiama la funzione al cambio
+                            />
+                            {/* La label ora funge da pulsante visibile */}
+                            <label htmlFor="cv-upload" className={styles.uploadButton}>
+                                Seleziona File
+                            </label>
                         </div>
                     </div>
+                    {/* ========================================= */}
+
                     <button type="submit" className="btn btn-primary">
                         <FaPaperPlane /> Invia Candidatura
                     </button>
                 </form>
-                <small className={styles.gdprNote}>* Campi obbligatori...</small>
+                <small className={styles.gdprNote}>* Campi obbligatori (eccetto CV)...</small>
             </div>
         </section>
     );
