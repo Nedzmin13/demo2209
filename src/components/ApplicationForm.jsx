@@ -1,19 +1,32 @@
 // src/components/ApplicationForm.jsx
-import React, { useState } from 'react'; // Importa useState
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './ApplicationForm.module.css';
-import { FaPaperPlane, FaUpload } from 'react-icons/fa';
+import { FaPaperPlane, FaLink } from 'react-icons/fa';
 
 const ApplicationForm = () => {
-    // Stato per memorizzare il nome del file selezionato
-    const [fileName, setFileName] = useState('');
+    const form = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('');
 
-    // Funzione che si attiva quando l'utente seleziona un file
-    const handleFileChange = (event) => {
-        if (event.target.files.length > 0) {
-            setFileName(event.target.files[0].name);
-        } else {
-            setFileName('');
-        }
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus('');
+
+        emailjs.sendForm(
+            'service_t3wk81k',
+            'template_g7fn9sf',
+            form.current,
+            'JPwGZWZsdDZcLIVDc'
+        ).then((result) => {
+            setSubmitStatus('success');
+            form.current.reset();
+        }, (error) => {
+            setSubmitStatus('error');
+        }).finally(() => {
+            setIsSubmitting(false);
+        });
     };
 
     return (
@@ -21,19 +34,9 @@ const ApplicationForm = () => {
             <div className={styles.formWrapper}>
                 <div className={styles.header}>
                     <h2>Candidati Ora</h2>
-                    <p>Compila il form sottostante per inviarci la tua candidatura...</p>
+                    <p>Compila il form con i tuoi dati. Se desideri, puoi caricare il tuo CV su un servizio come Google Drive o Dropbox e incollare qui il link di condivisione.</p>
                 </div>
-                <form
-                    name="candidatura"
-                    method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    encType="multipart/form-data"
-                    action="/thank-you.html"
-                >
-                    <input type="hidden" name="form-name" value="candidatura" />
-                    <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
-
+                <form ref={form} onSubmit={sendEmail} className={styles.form}>
                     <div className={styles.formRow}>
                         <div className={styles.formGroup}><label htmlFor="app-name">Nome e Cognome *</label><input type="text" id="app-name" name="name" required /></div>
                         <div className={styles.formGroup}><label htmlFor="app-phone">Telefono *</label><input type="tel" id="app-phone" name="phone" required /></div>
@@ -52,34 +55,28 @@ const ApplicationForm = () => {
                     </div>
                     <div className={styles.formGroup}><label htmlFor="presentation">Presentazione *</label><textarea id="presentation" name="presentation" rows="5" required></textarea></div>
 
-                    {/* === BLOCCO UPLOAD MODIFICATO E CORRETTO === */}
                     <div className={styles.formGroup}>
-                        <label htmlFor="cv-upload">Carica il tuo CV (Opzionale)</label>
-                        <div className={styles.uploadBox}>
-                            <FaUpload />
-                            {/* Mostra il nome del file selezionato o il testo di default */}
-                            <p>{fileName || 'Trascina qui il tuo CV o clicca per selezionare'}</p>
-                            <small>PDF, DOC, DOCX (max 5MB)</small>
+                        <label htmlFor="cv-link">Link al tuo CV (Opzionale)</label> {/* Testo modificato */}
+                        <div className={styles.linkInputWrapper}>
+                            <FaLink className={styles.linkIcon} />
                             <input
-                                type="file"
-                                id="cv-upload" // ID per collegare la label
-                                name="cv"
-                                className={styles.fileInput}
-                                onChange={handleFileChange} // Chiama la funzione al cambio
+                                type="url"
+                                id="cv-link"
+                                name="cv_link"
+                                placeholder="https://www.dropbox.com/s/..."
+                                // 'required' è stato rimosso da qui
                             />
-                            {/* La label ora funge da pulsante visibile */}
-                            <label htmlFor="cv-upload" className={styles.uploadButton}>
-                                Seleziona File
-                            </label>
                         </div>
                     </div>
-                    {/* ========================================= */}
 
-                    <button type="submit" className="btn btn-primary">
-                        <FaPaperPlane /> Invia Candidatura
+                    <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                        {isSubmitting ? 'Invio in corso...' : <><FaPaperPlane /> Invia Candidatura</>}
                     </button>
+
+                    {submitStatus === 'success' && <p className={styles.successMessage}>Candidatura inviata con successo! Ti ringraziamo.</p>}
+                    {submitStatus === 'error' && <p className={styles.errorMessage}>Si è verificato un errore. Riprova.</p>}
                 </form>
-                <small className={styles.gdprNote}>* Campi obbligatori (eccetto CV)...</small>
+                <small className={styles.gdprNote}>* Campi obbligatori.</small>
             </div>
         </section>
     );
