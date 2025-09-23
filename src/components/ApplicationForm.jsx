@@ -40,7 +40,6 @@ const ApplicationForm = () => {
             } else {
                 setSubmitStatus('error');
             }
-            // eslint-disable-next-line no-unused-vars
         } catch (error) {
             setSubmitStatus('error');
         } finally {
