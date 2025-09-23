@@ -1,4 +1,3 @@
-// src/components/ContactForm.jsx
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './ContactForm.module.css';
@@ -15,10 +14,10 @@ const ContactForm = () => {
         setSubmitStatus('');
 
         emailjs.sendForm(
-            'service_t3wk81k',      // Il tuo Service ID
-            'template_g7fn9sf',     // Il tuo Template ID
+            'service_t3wk81k',
+            'template_2czjkq4',
             form.current,
-            'JPwGZWZsdDZcLIVDc'       // La tua Public Key
+            'JPwGZWZsdDZcLIVDc'
         ).then((result) => {
             console.log('SUCCESS!', result.text);
             setSubmitStatus('success');

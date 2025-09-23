@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './ApplicationForm.module.css';
-import { FaPaperPlane, FaLink } from 'react-icons/fa';
+import { FaPaperPlane, FaLink, FaEnvelope } from 'react-icons/fa';
 
 const ApplicationForm = () => {
     const form = useRef();
@@ -20,7 +20,7 @@ const ApplicationForm = () => {
             form.current,
             'JPwGZWZsdDZcLIVDc'
         ).then((result) => {
-            setSubmitStatus('success');
+            setSubmit-status('success');
             form.current.reset();
         }, (error) => {
             setSubmitStatus('error');
@@ -37,6 +37,7 @@ const ApplicationForm = () => {
                     <p>Compila il form con i tuoi dati. Se desideri, puoi caricare il tuo CV su un servizio come Google Drive o Dropbox e incollare qui il link di condivisione.</p>
                 </div>
                 <form ref={form} onSubmit={sendEmail} className={styles.form}>
+                    {/* ...Tutti i campi del form (Nome, Telefono, Email, etc.) rimangono invariati... */}
                     <div className={styles.formRow}>
                         <div className={styles.formGroup}><label htmlFor="app-name">Nome e Cognome *</label><input type="text" id="app-name" name="name" required /></div>
                         <div className={styles.formGroup}><label htmlFor="app-phone">Telefono *</label><input type="tel" id="app-phone" name="phone" required /></div>
@@ -54,18 +55,11 @@ const ApplicationForm = () => {
                         </select>
                     </div>
                     <div className={styles.formGroup}><label htmlFor="presentation">Presentazione *</label><textarea id="presentation" name="presentation" rows="5" required></textarea></div>
-
                     <div className={styles.formGroup}>
-                        <label htmlFor="cv-link">Link al tuo CV (Opzionale)</label> {/* Testo modificato */}
+                        <label htmlFor="cv-link">Link al tuo CV (Opzionale)</label>
                         <div className={styles.linkInputWrapper}>
                             <FaLink className={styles.linkIcon} />
-                            <input
-                                type="url"
-                                id="cv-link"
-                                name="cv_link"
-                                placeholder="https://www.dropbox.com/s/..."
-                                // 'required' è stato rimosso da qui
-                            />
+                            <input type="url" id="cv-link" name="cv_link" placeholder="https://www.dropbox.com/s/..."/>
                         </div>
                     </div>
 
@@ -76,6 +70,19 @@ const ApplicationForm = () => {
                     {submitStatus === 'success' && <p className={styles.successMessage}>Candidatura inviata con successo! Ti ringraziamo.</p>}
                     {submitStatus === 'error' && <p className={styles.errorMessage}>Si è verificato un errore. Riprova.</p>}
                 </form>
+
+                {/* === NUOVA SEZIONE AGGIUNTA === */}
+                <div className={styles.alternativeOption}>
+                    <p>In alternativa, inviaci direttamente il tuo CV via email:</p>
+                    <a
+                        href="mailto:sartorello@sartorelloescavazioni.com?subject=Candidatura Spontanea"
+                        className={styles.emailButton} // Rimosse le classi 'btn' e 'btn-secondary'
+                    >
+                        <FaEnvelope/> Invia Email con CV
+                    </a>
+                </div>
+                {/* ============================== */}
+
                 <small className={styles.gdprNote}>* Campi obbligatori.</small>
             </div>
         </section>

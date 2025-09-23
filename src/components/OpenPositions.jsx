@@ -1,6 +1,8 @@
 // src/components/OpenPositions.jsx
 import React from 'react';
 import styles from './OpenPositions.module.css';
+import { FaEnvelope } from 'react-icons/fa'; // Importa l'icona
+import { Link as ScrollLink } from 'react-scroll'; // Importa per lo scroll
 
 const positions = [
     'Escavatorista',
@@ -24,10 +26,34 @@ const OpenPositions = () => {
                         </div>
                     ))}
                 </div>
+
+                {/* === SEZIONE "SPONTANEOUS" MODIFICATA === */}
                 <div className={styles.spontaneous}>
-                    <p>Invia la tua candidatura per una di queste posizioni o per una candidatura spontanea.</p>
-                    <a href="#application-form" className="btn btn-primary">Candidati Ora</a>
+                    <p>Invia la tua candidatura compilando il form sottostante.</p>
+                    <ScrollLink
+                        to="application-form"
+                        smooth={true}
+                        duration={500}
+                        offset={-80}
+                        className="btn btn-primary"
+                    >
+                        Candidati Ora
+                    </ScrollLink>
+
+                    <div className={styles.divider}>
+                        <span>oppure</span>
+                    </div>
+
+                    <p>Inviaci direttamente il tuo CV via email:</p>
+                    <a
+                        href="mailto:sartorello@sartorelloescavazioni.com?subject=Candidatura Spontanea"
+                        className={styles.emailButton}
+                    >
+                        <FaEnvelope /> Invia Email con CV
+                    </a>
                 </div>
+                {/* ======================================= */}
+
             </div>
         </section>
     );

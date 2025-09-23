@@ -8,24 +8,19 @@
     margin-bottom: 3rem;
 }
 
-/* === NUOVA GRIGLIA 2x2 === */
 .grid {
     display: grid;
-    /* Su desktop, 2 colonne */
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    max-width: 800px; /* Larghezza massima per non allargare le card */
-    margin: 0 auto; /* Centra la griglia */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Su mobile, torna a una colonna */
 @media (max-width: 576px) {
     .grid {
         grid-template-columns: 1fr;
     }
 }
-/* ======================== */
-
 
 .card {
     background-color: #fff;
@@ -48,10 +43,60 @@
     color: var(--text-dark);
 }
 
+/* === NUOVI STILI AGGIUNTI QUI === */
+
 .spontaneous {
     text-align: center;
     margin-top: 3rem;
     border-top: 1px dashed var(--border-color);
     padding-top: 3rem;
 }
-.spontaneous p { margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem; }
+
+.spontaneous p {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Stile per il separatore "oppure" */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    color: #aaa;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider span {
+    padding: 0 1rem;
+}
+
+/* Stile per il bottone email */
+.emailButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    /* Stile "secondario" */
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--primary-yellow);
+}
+
+.emailButton:hover {
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+}
