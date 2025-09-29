@@ -13,6 +13,12 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import PaginaImmagini from "./pages/PaginaImmagini.jsx";
 import PaginaVideo from "./pages/PaginaVideo.jsx";
 import Preventivo from "./pages/Preventivo.jsx";
+import ScaviMovimentoTerra from "./pages/ScaviMovimentoTerra.jsx";
+import Demolizioni from "./pages/Demolizioni.jsx";
+import OpereStradali from "./pages/OpereStradali.jsx";
+import TrasportoContoTerzi from "./pages/TrasportoContoTerzi.jsx";
+import CampagneMobili from "./pages/CampagneMobili.jsx";
+import AbbattimentoAlberi from "./pages/AbbattimentoAlberi.jsx";
 
 function App() {
     return (
@@ -31,6 +37,13 @@ function App() {
                     <Route path="/preventivo" element={<Preventivo />} />
                     <Route path="/lavora-con-noi" element={<LavoraConNoi />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/servizi/scavi-e-movimento-terra" element={<ScaviMovimentoTerra />} />
+                    <Route path="/servizi/demolizioni" element={<Demolizioni />} />
+                    <Route path="/servizi/opere-stradali" element={<OpereStradali />} />
+                    <Route path="/servizi/trasporto-conto-terzi" element={<TrasportoContoTerzi />} />
+                    <Route path="/servizi/campagne-mobili" element={<CampagneMobili />} />
+                    <Route path="/servizi/abbattimento-alberi" element={<AbbattimentoAlberi />} />
+
                 </Routes>
             </main>
             <Footer />

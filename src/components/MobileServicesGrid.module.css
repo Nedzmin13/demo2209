@@ -1,0 +1,41 @@
+/* src/components/MobileServicesGrid.module.css */
+.mobileGridSection {
+    /* Di default, questa sezione è NASCOSTA */
+    display: none;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Questa sezione diventa VISIBILE solo su mobile */
+@media (max-width: 768px) {
+    .mobileGridSection {
+        display: grid;
+        grid-template-columns: 1fr; /* Una colonna */
+        gap: 1.5rem;
+    }
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.iconWrapper {
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.card p {
+    color: #555;
+}

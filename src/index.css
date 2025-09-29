@@ -4,7 +4,7 @@
 
 /* CSS Variables (Color Palette) */
 :root {
-  --primary-yellow: #FFC400;
+  --primary-yellow: #f1cc3a;
   --dark-grey: #222222;
   --light-grey-bg: #f8f9fa;
   --text-dark: #333333;
@@ -101,5 +101,21 @@ a {
     padding-bottom: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+.desktopOnly {
+  display: block;
+}
+.mobileOnly {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .desktopOnly {
+    display: none;
+  }
+  .mobileOnly {
+    display: block;
   }
 }

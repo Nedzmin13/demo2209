@@ -1,47 +1,58 @@
+/* src/components/ServicesPreview.module.css */
 .servicesSection {
     background-color: var(--light-grey-bg);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .header {
     max-width: 700px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 4rem auto;
     text-align: center;
 }
+.header h2 { margin-bottom: 1rem; }
+.header p { font-size: 1.1rem; color: #666; }
 
-.header h2 {
-    margin-bottom: 1rem;
-}
-
-.header p {
-    font-size: 1.1rem;
-    color: #666;
-}
-
+/* --- GRIGLIA STATICA 3x3 --- */
 .servicesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Su desktop, crea 3 colonne */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* === MODIFICHE PER L'ALLINEAMENTO INTERNO === */
+/* Su tablet, passa a 2 colonne */
+@media (max-width: 992px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Su smartphone, passa a 1 colonna */
+@media (max-width: 576px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ======================== */
+
+
 .serviceCard {
     background-color: #fff;
     padding: 2.5rem 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    /* 1. Trasformiamo la card in un contenitore flex verticale */
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .serviceCard:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,19 +60,16 @@
     font-size: 3rem;
     color: var(--primary-yellow);
     margin-bottom: 1.5rem;
-    display: inline-block;
 }
 
 .cardTitle {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
-
-    min-height: 2.5em;
-
+    min-height: 2.5em; /* Mantiene l'allineamento dei titoli */
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-dark);
 }
 
 .serviceCard p {
@@ -69,20 +77,12 @@
 }
 
 .ctaButtonContainer {
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .header h2 {
-        font-size: 2rem;
-    }
-    .header p {
-        font-size: 1rem;
-    }
-    .serviceCard {
-        padding: 2rem 1.5rem;
-    }
+/* Reset della min-height su mobile dove non serve */
+@media (max-width: 576px) {
     .cardTitle {
         min-height: auto;
     }

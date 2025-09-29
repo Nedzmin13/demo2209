@@ -1,16 +1,24 @@
+// src/pages/PaginaVideo.jsx
 import React from 'react';
 import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';
 import styles from '../components/VideoGallery.module.css';
+import YouTube from 'react-youtube';
 
-const VIDEO_COUNT = 12;
-const videos = Array.from({ length: VIDEO_COUNT }, (_, i) => `/lavori.video----${i + 1}.mp4`);
+import LazyYouTube from '../components/LazyYouTube';
+// === INCOLLA QUI GLI ID DEI 12 VIDEO DI YOUTUBE ===
+const youtubeVideoIds = [
+    "W9wbjLCHyyY", "VLjaGjEIqZo", "dI_xPZhiKHc", "j-ftzWJz91Q",
+    "NRhoVHqbey4", "7jd_UJo7bMc", "HOKHkpJRhBU", "MN0gFdYwkPw",
+    "ZPZShuJx6h8", "xI7C73fbU_M", "ID_VIDEO_11", "ID_VIDEO_12",
+];
+// =================================================
 
 const PaginaVideo = () => {
     return (
         <>
             <Title>Galleria Video - I Nostri Lavori | Sartorello Escavazioni</Title>
-            <Meta name="description" content="Guarda i video dei nostri macchinari in azione durante scavi, demolizioni e opere stradali." />
+            <Meta name="description" content="Guarda i video dei nostri macchinari in azione..." />
 
             <PageHeader
                 title="Galleria Video"
@@ -18,12 +26,9 @@ const PaginaVideo = () => {
             />
             <div className="container">
                 <div className={styles.videoGrid}>
-                    {videos.map((src, index) => (
+                    {youtubeVideoIds.map((videoId, index) => (
                         <div key={index} className={styles.galleryItem}>
-                            <video width="100%" controls preload="metadata">
-                                <source src={src} type="video/mp4" />
-                                Il tuo browser non supporta il tag video.
-                            </video>
+                            <LazyYouTube videoId={videoId} title={`Video lavoro ${index + 1}`} />
                         </div>
                     ))}
                 </div>

@@ -1,0 +1,23 @@
+/* src/pages/Lavori.module.css */
+
+/* Di default (desktop), nascondiamo la versione mobile */
+.mobileOnly {
+    display: none;
+}
+
+/* E mostriamo quella desktop */
+.desktopOnly {
+    display: block;
+}
+
+
+/* Su mobile, invertiamo la situazione */
+@media (max-width: 992px) {
+    .mobileOnly {
+        display: block;
+    }
+
+    .desktopOnly {
+        display: none;
+    }
+}

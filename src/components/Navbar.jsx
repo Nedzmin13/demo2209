@@ -1,3 +1,4 @@
+// src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
@@ -18,22 +19,19 @@ const Navbar = () => {
 
     return (
         <header className={styles.header}>
-            {/* ===== BARRA SUPERIORE DEI CONTATTI ===== */}
             <div className={styles.topBar}>
                 <div className={styles.topBarContainer}>
                     <a href="tel:0444562374"><FaPhoneAlt /> 0444562374</a>
-                    <a href="mailto:info@sartorello.it"><FaEnvelope />
-                        sartorello@sartorelloescavazioni.com</a>
+                    <a href="mailto:sartorello@sartorelloescavazioni.com"><FaEnvelope /> sartorello@sartorelloescavazioni.com</a>
                 </div>
             </div>
 
-            {/* ===== BARRA DI NAVIGAZIONE PRINCIPALE ===== */}
             <div className={styles.navContainer}>
                 <NavLink to="/" className={styles.logoContainer} onClick={closeMobileMenu}>
                     <img src={logo} alt="Sartorello Escavazioni Logo" className={styles.logoImg} />
-                    <div className={styles.logoText}>
-                        <span>SARTORELLO</span>
-                        <span className={styles.subtext}>ESCAVAZIONI SRL</span>
+                    <div className={styles.logoTextContainer}>
+                        <span className={styles.logoMainText}>SARTORELLO</span>
+                        <span className={styles.logoSubText}>ESCAVAZIONI E TRASPORTI</span>
                     </div>
                 </NavLink>
 
@@ -46,16 +44,11 @@ const Navbar = () => {
                     <NavLink to="/lavora-con-noi" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Lavora con noi</NavLink>
                 </nav>
 
-                <div className={styles.headerRightDesktop}>
-                    <a href="/preventivo" className="btn btn-primary">Richiedi Preventivo</a>
-                </div>
-
                 <div className={styles.mobileMenuIcon} onClick={toggleMobileMenu}>
                     {isMobileMenuOpen ? <FiX /> : <FiMenu />}
                 </div>
             </div>
 
-            {/* Menu Mobile a tendina */}
             <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <NavLink to="/" onClick={closeMobileMenu} className={styles.mobileNavLink}>Home</NavLink>
                 <NavLink to="/chi-siamo" onClick={closeMobileMenu} className={styles.mobileNavLink}>Chi Siamo</NavLink>
@@ -63,9 +56,6 @@ const Navbar = () => {
                 <NavLink to="/lavori" onClick={closeMobileMenu} className={styles.mobileNavLink}>Lavori</NavLink>
                 <NavLink to="/contatti" onClick={closeMobileMenu} className={styles.mobileNavLink}>Contatti</NavLink>
                 <NavLink to="/lavora-con-noi" onClick={closeMobileMenu} className={styles.mobileNavLink}>Lavora con noi</NavLink>
-                <a href="/preventivo" onClick={closeMobileMenu} className={`${styles.mobileQuoteButton} btn btn-primary`}>
-                    Richiedi Preventivo
-                </a>
             </div>
         </header>
     );

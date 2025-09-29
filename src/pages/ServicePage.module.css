@@ -1,0 +1,64 @@
+/* src/pages/ServicePage.module.css */
+
+/* Stile per ogni sezione di galleria (immagini o video) */
+.gallerySection {
+    margin-bottom: 4rem; /* Spazio tra la galleria immagini e quella video */
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-yellow);
+    display: inline-block; /* Per far funzionare il bordo solo sotto il testo */
+}
+
+/* Centra il titolo */
+.gallerySection {
+    text-align: center;
+}
+
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    text-align: left; /* Riporta l'allineamento a sinistra per gli elementi */
+}
+
+.galleryItem {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.galleryItem img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galleryItem img:hover {
+    transform: scale(1.05);
+}
+
+.galleryItem video {
+    width: 100%;
+    display: block;
+}
+
+.noMedia {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    padding: 3rem 0;
+}
+
+.youtubePlayer {
+    width: 100%;
+    height: 100%;
+}

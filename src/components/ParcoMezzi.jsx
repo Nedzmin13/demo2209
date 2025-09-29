@@ -2,25 +2,26 @@ import React from 'react';
 import styles from './ParcoMezzi.module.css';
 
 const mezzi = [
-    "3 escavatori cingolati 360 q.li",
+    "4 escavatori cingolati 360 q.li",
     "5 escavatori cingolati 250 q.li",
-    "2 escavatori gommati 120 q.li",
-    "2 miniescavatore cingolato 50 q.li",
-    "1 miniescavatore cingolato 35 q.li",
-    "3 miniescavatori cingolati 16 q.li",
-    "1 minipala gommata 35 q.li",
-    "1 minipala cingolata 60 q.li",
-    "1 rullo vibrocompattatore 90 q.li",
-    "2 lama apripista cingolata 180 q.li",
+    "2 escavatori gommati 130 q.li",
+    "2 miniescavatore cingolato 55 q.li",
+    "2 miniescavatore cingolato 30 q.li",
+    "2 miniescavatori cingolati 18 q.li",
+    "2 minipala cingolata 60 q.li",
+    "1 pala cingolata apripista 260 q.li",
+    "2 pala cingolata apripista 160 q.li",
+    "1 rullo compressore ferro/gomma 140 q.li",
+    "1 rullo compressore ferro/gomma 80 q.li",
+    "1 rullo compressore ferro/gomma 40 q.li",
     "10 bilici mezzi d'opera (portata 560 q.li)",
-    "1 pianale per trasporti eccezionali c/terzi",
-    "2 motrice scarrabile (portata 400 q.li)",
-    "6 motrici mezzi d'opera (portata 400 q.li)",
+    "2 pianali per trasporti macchine operatrici",
     "1 autocarro SCARRABILE 160 q.li",
-    "1 autocarro (portata 120 q.li)",
-    "1 autocarro scarrabile 109 q.li",
-    "2 autocarri (portata 80 q.li)",
-    "5 FURGONI ATTREZZATI 35 q.li"
+    "8 autocarri 4 assi mezzo d'opera 410 q.li",
+    "4 autocarri 75 / 80 / 120 q.li",
+    "2 FURGONI ATTREZZATI PER EDILIZIA STRADALE",
+    "Noleggio nr.6 casoni da 15/30 mc",
+    "Noleggio nr.5 casoni da 5 mc"
 ];
 
 

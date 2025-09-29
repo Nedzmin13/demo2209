@@ -1,0 +1,87 @@
+/* src/components/ServicesBar.module.css */
+.servicesBar {
+    background-color: var(--primary-yellow);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- LAYOUT DESKTOP (STATICO) - DEFAULT --- */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Su desktop, permette di andare a capo se necessario */
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 2rem;
+}
+
+.serviceItem {
+    color: var(--text-dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    position: relative;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* Mostra solo la PRIMA metà degli elementi su desktop */
+.serviceItem:nth-child(n+7) {
+    display: none;
+}
+
+.serviceItem:not(:nth-child(6))::after { /* Linea su tutti tranne il sesto */
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* --- LAYOUT MOBILE (ANIMATO) --- */
+@media (max-width: 992px) {
+    .servicesBar, .container {
+        padding: 0;
+    }
+    .container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .wrapper {
+        flex-wrap: nowrap;
+        gap: 0;
+        padding: 0;
+        animation: scroll 30s linear infinite;
+        pointer-events: none;
+    }
+    .serviceItem {
+        padding: 1rem 1.5rem;
+        line-height: 1;
+    }
+
+    /* Su mobile, mostra TUTTI gli elementi (annulla la regola di prima) */
+    .serviceItem:nth-child(n+7) {
+        display: flex;
+    }
+
+    /* E nasconde TUTTE le linee verticali */
+    .serviceItem:not(:nth-child(6))::after,
+    .serviceItem:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

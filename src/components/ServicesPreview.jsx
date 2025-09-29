@@ -1,29 +1,18 @@
+// src/components/ServicesPreview.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ServicesPreview.module.css';
-import { TbTruck, TbBuildingSkyscraper, TbRoad, TbSwitchHorizontal } from 'react-icons/tb';
+import { TbTruck, TbBuildingSkyscraper, TbRoad, TbSwitchHorizontal, TbRecycle } from 'react-icons/tb';
+import { GiChainsaw } from "react-icons/gi";
 
+// Lista singola dei servizi
 const services = [
-    {
-        icon: <TbTruck />,
-        title: 'Scavi e Movimento Terra',
-        description: 'Servizi di scavo, estrazione di ghiaia e materiali inerti per preparare ogni tipo di cantiere.',
-    },
-    {
-        icon: <TbBuildingSkyscraper />,
-        title: 'Demolizioni Civili e Industriali',
-        description: 'Eseguiamo demolizioni controllate e sicure per edifici residenziali, commerciali e industriali.',
-    },
-    {
-        icon: <TbRoad />,
-        title: 'Opere Stradali',
-        description: 'Costruzione di sottofondi, posa di fognature, urbanizzazioni e preparazione per l\'edilizia stradale.',
-    },
-    {
-        icon: <TbSwitchHorizontal />,
-        title: 'Trasporto Conto Terzi',
-        description: 'Grazie a Sartorello Trasporti Srl, offriamo un servizio specializzato di trasporto merci e materiali per cantieri.',
-    },
+    { icon: <TbTruck />, title: 'Scavi e Movimento Terra', description: 'Servizi professionali di scavo e livellamento terreni.' },
+    { icon: <TbBuildingSkyscraper />, title: 'Demolizioni Civili e Industriali', description: 'Demolizioni controllate con recupero dei materiali.' },
+    { icon: <TbRoad />, title: 'Opere Stradali', description: 'Realizzazione di sottofondi, fognature e urbanizzazioni.' },
+    { icon: <TbSwitchHorizontal />, title: 'Trasporto Conto Terzi', description: 'Servizio specializzato di trasporto merci per cantieri.' },
+    { icon: <TbRecycle />, title: 'Campagne Mobili', description: 'Frantumazione e vagliatura in loco con impianti mobili.' },
+    { icon: <GiChainsaw />, title: 'Abbattimento Alberi', description: 'Interventi di abbattimento e potatura in sicurezza.' },
 ];
 
 const ServicesPreview = () => {
@@ -32,9 +21,10 @@ const ServicesPreview = () => {
             <div className="container">
                 <div className={styles.header}>
                     <h2>I Nostri Servizi</h2>
-                    <p>Offriamo soluzioni complete per ogni esigenza nel settore delle costruzioni e movimento
-                        terra.</p>
+                    <p>Offriamo soluzioni complete per ogni esigenza nel settore delle costruzioni e movimento terra.</p>
                 </div>
+
+                {/* Contenitore per la griglia statica */}
                 <div className={styles.servicesGrid}>
                     {services.map((service, index) => (
                         <div key={index} className={styles.serviceCard}>
@@ -44,15 +34,15 @@ const ServicesPreview = () => {
                         </div>
                     ))}
                 </div>
+
                 <div className={styles.ctaButtonContainer}>
                     <Link to="/lavori" className="btn btn-primary">
                         Vedi i Nostri Lavori &rarr;
                     </Link>
                 </div>
-
             </div>
         </section>
-);
+    );
 };
 
 export default ServicesPreview;

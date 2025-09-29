@@ -5,6 +5,7 @@ import CertificationsList from '../components/CertificationsList';
 import QualityStandards from '../components/QualityStandards';
 import DownloadSection from '../components/DownloadSection';
 import { Title, Meta } from 'react-head';
+import ServicesBar from "../components/ServicesBar.jsx";
 
 
 const Certificazioni = () => {
@@ -15,6 +16,8 @@ const Certificazioni = () => {
             <Meta name="description"
                   content="Sartorello Escavazioni è
                   certificata UNI EN ISO 9001:2015 e possiede l'attestazione SOA per l'esecuzione di lavori pubblici. Garanzia di qualità e sicurezza."/>
+            <ServicesBar />
+
             <PageHeader
                 title="Certificazioni"
                 subtitle="Per assicurare ai nostri clienti un servizio sempre più efficiente, l’Azienda adotta un sistema di qualità UNI EN ISO 9001:2015 prevedendo un costante sviluppo e miglioramento delle attività produttive e di controllo delle lavorazioni."

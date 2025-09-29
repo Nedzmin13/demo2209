@@ -6,6 +6,7 @@ import ValuesSection from '../components/ValuesSection';
 import MissionSection from '../components/MissionSection';
 import ParcoMezzi from '../components/ParcoMezzi';
 import { Title, Meta } from 'react-head';
+import ServicesBar from "../components/ServicesBar.jsx";
 
 
 const ChiSiamo = () => {
@@ -14,6 +15,8 @@ const ChiSiamo = () => {
             <Title>Chi Siamo - La Storia di Sartorello Escavazioni</Title>
             <Meta name="description" content="Scopri la storia di Sartorello Escavazioni,
             un'azienda con esperienza decennale guidata da Giuseppe Sartorello, con 32 specialisti e un parco mezzi all'avanguardia." />
+
+            <ServicesBar />
 
             <PageHeader
                 title="Chi Siamo"

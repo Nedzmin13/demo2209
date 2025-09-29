@@ -1,11 +1,16 @@
+// src/components/Hero.jsx
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import styles from './Hero.module.css';
 
 const Hero = () => {
     return (
         <section className={styles.hero}>
+            {/* Questo video ora sarà gestito dal CSS per essere sempre visibile */}
+            <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
+                <source src="/lavori-hero6.mp4" type="video/mp4" />
+            </video>
+
             <div className={styles.overlay}></div>
             <div className={styles.content}>
                 <h1 className={styles.title}>
@@ -18,7 +23,6 @@ const Hero = () => {
                 </p>
                 <div className={styles.buttonContainer}>
                     <RouterLink to="/chi-siamo" className="btn btn-primary">Scopri di più &rarr;</RouterLink>
-                    <RouterLink to="/preventivo" className="btn btn-secondary">Richiedi Preventivo</RouterLink>
                 </div>
             </div>
         </section>
