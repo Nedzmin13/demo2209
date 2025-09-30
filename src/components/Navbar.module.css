@@ -29,7 +29,7 @@
     color: var(--text-dark); /* Testo nero */
     padding: 2px 5px;
     border-radius: 4px;
-    text-transform: uppercase;
+
 }
 
 .navLinksDesktop { display: flex; gap: 30px; position: absolute; left: 50%; transform: translateX(-50%); }
@@ -50,7 +50,7 @@
 
 @media (max-width: 480px) {
     .navContainer { padding: 0 1rem; }
-    .logoImg { height: 40px; }
-    .logoMainText { font-size: 1rem; }
-    .logoSubText { font-size: 0.6rem; }
+    .logoImg { height: 50px; }
+    .logoMainText { font-size: 1.1rem; }
+    .logoSubText { font-size: 0.5rem; }
 }

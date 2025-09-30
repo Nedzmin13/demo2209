@@ -19,6 +19,7 @@ import OpereStradali from "./pages/OpereStradali.jsx";
 import TrasportoContoTerzi from "./pages/TrasportoContoTerzi.jsx";
 import CampagneMobili from "./pages/CampagneMobili.jsx";
 import AbbattimentoAlberi from "./pages/AbbattimentoAlberi.jsx";
+import GalleriaMista from "./pages/GalleriaMista.jsx";
 
 function App() {
     return (
@@ -31,8 +32,7 @@ function App() {
                     <Route path="/chi-siamo" element={<ChiSiamo />} />
                     <Route path="/certificazioni" element={<Certificazioni />} />
                     <Route path="/lavori" element={<Lavori />} />
-                    <Route path="/lavori/immagini" element={<PaginaImmagini />} />
-                    <Route path="/lavori/video" element={<PaginaVideo />} />
+                    <Route path="/lavori/galleria-mista" element={<GalleriaMista />} />
                     <Route path="/contatti" element={<Contatti />} />
                     <Route path="/preventivo" element={<Preventivo />} />
                     <Route path="/lavora-con-noi" element={<LavoraConNoi />} />

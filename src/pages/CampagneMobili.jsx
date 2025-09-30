@@ -11,8 +11,8 @@ const pageData = {
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183858/Screenshot_2025-06-27_172323_cyppba.webp"
     ],
     youtubeVideoIds: [
-        "ZPZShuJx6h8",
-        "xI7C73fbU_M",
+        "",
+        "",
     ]
 };
 

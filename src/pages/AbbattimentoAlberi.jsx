@@ -10,8 +10,8 @@ const pageData = {
 
     ],
     youtubeVideoIds: [
-        "JfpCSSBfufk", // Esempio di ID
-        "altro_id_video", // Altro esempio
+        "", // Esempio di ID
+        "", // Altro esempio
     ]
 };
 

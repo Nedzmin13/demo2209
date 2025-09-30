@@ -13,8 +13,8 @@ const pageData = {
     "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183857/2_asi5af.webp",
     ],
     youtubeVideoIds: [
-        "JfpCSSBfufk", // Esempio di ID
-        "altro_id_video", // Altro esempio
+        "", // Esempio di ID
+        "", // Altro esempio
     ]
 };
 

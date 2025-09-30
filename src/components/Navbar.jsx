@@ -31,7 +31,7 @@ const Navbar = () => {
                     <img src={logo} alt="Sartorello Escavazioni Logo" className={styles.logoImg} />
                     <div className={styles.logoTextContainer}>
                         <span className={styles.logoMainText}>SARTORELLO</span>
-                        <span className={styles.logoSubText}>ESCAVAZIONI E TRASPORTI</span>
+                        <span className={styles.logoSubText}>ESCAVAZIONI e TRASPORTI</span>
                     </div>
                 </NavLink>
 
