@@ -12,8 +12,7 @@ const pageData = {
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183861/lavori-23_tqczqg.webp"
     ],
     youtubeVideoIds: [
-        "", // Esempio di ID
-        "", // Altro esempio
+
     ]
 };
 

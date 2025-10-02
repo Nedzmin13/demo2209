@@ -1,6 +1,7 @@
+// src/components/CertificationsList.jsx
 import React from 'react';
 import styles from './CertificationsList.module.css';
-import { FaCheckCircle, FaStar, FaAward } from 'react-icons/fa';
+import { FaCheckCircle, FaAward, FaStar } from 'react-icons/fa';
 
 const certifications = [
     {
@@ -36,17 +37,21 @@ const CertificationsList = () => {
             <div className={styles.header}>
                 <h2>Le Nostre Certificazioni Principali</h2>
             </div>
-            <div className={styles.certGrid}>
+            <div className={styles.mainCertsContainer}>
                 {certifications.map((cert, index) => (
                     <div key={index} className={styles.certCard}>
                         <div className={styles.iconWrapper}>{cert.icon}</div>
-                        <h3 className={styles.cardTitle}>{cert.title}</h3>
-                        <span className={styles.cardSubtitle}>{cert.subtitle}</span>
-                        <p className={styles.description}>{cert.description}</p>
-                        <div className={styles.validity}>{cert.validity}</div>
-                        <a href={cert.pdfLink} className={styles.pdfButton} target="_blank" rel="noopener noreferrer">
-                            Visualizza PDF
-                        </a>
+                        <div className={styles.contentWrapper}>
+                            <h3 className={styles.cardTitle}>{cert.title}</h3>
+                            <span className={styles.cardSubtitle}>{cert.subtitle}</span>
+                            <p className={styles.description}>{cert.description}</p>
+                            <div className={styles.footer}>
+                                <span className={styles.validity}>{cert.validity}</span>
+                                <a href={cert.pdfLink} className={styles.pdfButton} target="_blank" rel="noopener noreferrer">
+                                    Visualizza PDF
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>

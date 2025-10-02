@@ -11,8 +11,7 @@ const pageData = {
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183860/TimePhoto_20200924_154303_oz4kdh.webp",
     ],
     youtubeVideoIds: [
-        "", // Esempio di ID
-        "", // Altro esempio
+
     ]
 };
 

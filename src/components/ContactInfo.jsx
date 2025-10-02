@@ -69,7 +69,9 @@ const ContactInfo = () => {
                                     {item.lines.map((email, i) => (
                                         <div key={i} className={styles.emailItem}>
                                             <span className={styles.emailLabel}>{email.label}</span>
-                                            <span className={styles.emailAddress}>{email.address}</span>
+                                            <a href={`mailto:${email.address}`} className={styles.emailAddress}>
+                                                {email.address}
+                                            </a>
                                         </div>
                                     ))}
                                 </div>

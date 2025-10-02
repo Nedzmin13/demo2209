@@ -100,8 +100,17 @@
     color: #333;
 }
 
+
+
 .emailAddress {
     font-size: 0.95rem;
-    color: #555;
+    color: #101010; /* Rendiamo il link blu per essere più riconoscibile */
     word-break: keep-all;
+    text-decoration: none; /* Rimuoviamo la sottolineatura di default */
+    transition: color 0.3s;
+}
+
+.emailAddress:hover {
+    color: #fcd770; /* Un blu più scuro al passaggio del mouse */
+    text-decoration: underline; /* Aggiungiamo la sottolineatura al passaggio del mouse */
 }
