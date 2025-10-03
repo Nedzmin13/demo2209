@@ -1,4 +1,3 @@
-// src/pages/ScaviMovimentoTerra.jsx
 import React from 'react';
 import ServicePage from './ServicePage';
 

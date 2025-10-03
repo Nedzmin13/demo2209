@@ -1,4 +1,3 @@
-// src/components/CertificationsList.jsx
 import React from 'react';
 import styles from './CertificationsList.module.css';
 import { FaCheckCircle, FaAward, FaStar } from 'react-icons/fa';

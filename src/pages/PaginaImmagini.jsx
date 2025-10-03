@@ -1,4 +1,3 @@
-// src/pages/PaginaImmagini.jsx
 import React, { useState } from 'react';
 import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';

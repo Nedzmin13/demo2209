@@ -1,4 +1,3 @@
-// src/components/LazyYouTube.jsx
 import React, { useState } from 'react';
 import styles from './LazyYouTube.module.css';
 import { FaPlayCircle } from 'react-icons/fa';

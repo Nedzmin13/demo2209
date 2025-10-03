@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import styles from './Hero.module.css';
@@ -6,7 +5,7 @@ import styles from './Hero.module.css';
 const Hero = () => {
     return (
         <section className={styles.hero}>
-            {/* Questo video ora sarà gestito dal CSS per essere sempre visibile */}
+
             <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
                 <source src="/lavori-hero6.mp4" type="video/mp4" />
             </video>

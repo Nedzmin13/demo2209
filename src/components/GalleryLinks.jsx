@@ -1,4 +1,3 @@
-// src/components/GalleryLinks.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './GalleryLinks.module.css';
@@ -11,7 +10,7 @@ const serviceLinks = [
     { icon: <FaRoad />, title: 'Opere Stradali', description: 'Progetti di urbanizzazione e preparazione per l\'edilizia stradale.', link: "/servizi/opere-stradali" },
     { icon: <FaTruckMoving />, title: 'Trasporto Conto Terzi', description: 'La nostra flotta specializzata nel trasporto di materiali.', link: "/servizi/trasporto-conto-terzi" },
     { icon: <FaRecycle />, title: 'Campagne Mobili', description: 'Vedi i nostri impianti di frantumazione e vagliatura in loco.', link: "/servizi/campagne-mobili" },
-    { icon: <GiChainsaw />, title: 'Abbattimento Alberi', description: 'Interventi di abbattimento e potatura in totale sicurezza.', link: "/servizi/abbattimento-alberi" },
+    { icon: <GiChainsaw />, title: 'Abbattimento Alberi', description: 'Interventi di abbattimento, rimozione e messa in sicurezza', link: "/servizi/abbattimento-alberi" },
     { icon: <FaImages />, title: 'Galleria Mista', description: 'Una selezione completa dei nostri migliori lavori.', link: "/lavori/galleria-mista" },
 ];
 

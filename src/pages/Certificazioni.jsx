@@ -1,4 +1,3 @@
-// src/pages/Certificazioni.jsx
 import React from 'react';
 import PageHeader from '../components/PageHeader';
 import CertificationsList from '../components/CertificationsList';

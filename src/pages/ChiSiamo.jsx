@@ -1,4 +1,3 @@
-// src/pages/ChiSiamo.jsx
 import React from 'react';
 import PageHeader from '../components/PageHeader';
 import HistorySection from '../components/HistorySection';

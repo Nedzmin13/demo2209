@@ -1,4 +1,3 @@
-// src/pages/GalleriaMista.jsx
 import React from 'react';
 import ServicePage from './ServicePage';
 
@@ -18,7 +17,7 @@ const pageData = {
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183858/IMG_20220517_191303494_HDR_pvd3bw.webp",
     ],
     youtubeVideoIds: [
-        // Incolla qui i TUOI 12 ID video da YouTube
+
     ]
 };
 

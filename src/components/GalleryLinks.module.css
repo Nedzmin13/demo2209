@@ -1,6 +1,4 @@
-/* src/components/GalleryLinks.module.css */
 .galleryLinksSection {
-    /* === MODIFICA CHIAVE: DA GRID A FLEXBOX === */
     display: flex;
     flex-wrap: wrap; /* Permette agli elementi di andare a capo */
     justify-content: center; /* Centra le card orizzontalmente */

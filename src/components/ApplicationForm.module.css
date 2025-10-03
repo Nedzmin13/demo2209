@@ -118,7 +118,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none; /* Rimuove la sottolineatura dal link */
+    text-decoration: none;
 
     /* Stile "secondario" di default (bordo giallo, sfondo trasparente) */
     background-color: transparent;

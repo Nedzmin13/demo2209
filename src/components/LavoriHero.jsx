@@ -1,4 +1,3 @@
-// src/components/LavoriHero.jsx
 import React from 'react';
 import styles from './LavoriHero.module.css';
 import { FaTruckMoving, FaBuilding, FaRoad, FaArrowsAltH, FaRecycle, FaTree } from 'react-icons/fa';
@@ -11,7 +10,7 @@ const services = [
     { icon: <FaRoad />, title: 'Opere Stradali', description: 'Costruzione di sottofondi, posa di fognature e urbanizzazioni.' },
     { icon: <FaTruckMoving />, title: 'Trasporto Conto Terzi', description: 'Servizio specializzato di trasporto merci e materiali per cantieri.' },
     { icon: <FaRecycle />, title: 'Campagne Mobili', description: 'Frantumazione e vagliatura in loco con i nostri impianti mobili.' },
-    { icon: <GiChainsaw />, title: 'Abbattimento Alberi', description: 'Interventi di abbattimento e potatura in sicurezza.' },
+    { icon: <GiChainsaw />, title: 'Abbattimento Alberi', description: 'Interventi di abbattimento, rimozione e messa in sicurezza.' },
 ];
 
 const duplicatedServices = [...services, ...services];

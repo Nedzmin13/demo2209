@@ -1,9 +1,8 @@
-// src/pages/ScaviMovimentoTerra.jsx
 import React from 'react';
 import ServicePage from './ServicePage';
 
 const pageData = {
-    title: "Campagne Mobili di Frantumazione",
+    title: "Campagne Mobili di Frantumazione e Vagliatura",
     description: "Portiamo i nostri impianti di frantumazione e vagliatura direttamente nel tuo cantiere. Un servizio efficiente per il recupero e il riciclo in loco dei materiali inerti.",
     seoDescription: "Servizi di campagne mobili per frantumazione e vagliatura in cantiere. Ottimizza i costi e ricicla i materiali inerti direttamente in loco con i nostri impianti.",
     images: [

@@ -1,4 +1,3 @@
-// src/components/PortfolioGrid.jsx
 import React from 'react';
 import styles from './PortfolioGrid.module.css';
 import { FaMapMarkerAlt, FaUserTie, FaRegClock, FaRegCalendarAlt, FaTag } from 'react-icons/fa';

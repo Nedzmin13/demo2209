@@ -1,4 +1,3 @@
-// src/pages/Contatti.jsx
 import React from 'react';
 import PageHeader from '../components/PageHeader';
 import ContactInfo from '../components/ContactInfo';

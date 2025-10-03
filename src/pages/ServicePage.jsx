@@ -1,11 +1,9 @@
-// src/pages/ServicePage.jsx
 import React from 'react';
 import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';
 import ServicesBar from '../components/ServicesBar';
 import styles from './ServicePage.module.css';
 
-// Importa Lightbox per le immagini
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -15,7 +13,7 @@ const ServicePage = ({ title, description, seoDescription, images = [], youtubeV
     // Stato per il lightbox delle immagini
     const [index, setIndex] = React.useState(-1);
 
-    // Prepara i dati per il lightbox (solo immagini)
+
     const lightboxImages = images.map(img => ({ src: img }));
 
     return (

@@ -1,4 +1,3 @@
-// src/pages/PaginaVideo.jsx
 import React from 'react';
 import { Title, Meta } from 'react-head';
 import PageHeader from '../components/PageHeader';
@@ -6,7 +5,6 @@ import styles from '../components/VideoGallery.module.css';
 import YouTube from 'react-youtube';
 
 import LazyYouTube from '../components/LazyYouTube';
-// === INCOLLA QUI GLI ID DEI 12 VIDEO DI YOUTUBE ===
 const youtubeVideoIds = [
     "W9wbjLCHyyY", "VLjaGjEIqZo", "dI_xPZhiKHc", "j-ftzWJz91Q",
     "NRhoVHqbey4", "7jd_UJo7bMc", "HOKHkpJRhBU", "MN0gFdYwkPw",
