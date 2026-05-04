@@ -6,20 +6,19 @@ import DownloadSection from '../components/DownloadSection';
 import { Title, Meta } from 'react-head';
 import ServicesBar from "../components/ServicesBar.jsx";
 
-
 const Certificazioni = () => {
     return (
         <>
-
-            <Title>Certificazioni ISO 9001 e SOA - Sartorello Escavazioni</Title>
+            {/* Meta tag aggiornati per SEO con tutte le certificazioni */}
+            <Title>Tutte le Certificazioni ISO e SOA - Sartorello Escavazioni</Title>
             <Meta name="description"
-                  content="Sartorello Escavazioni è
-                  certificata UNI EN ISO 9001:2015 e possiede l'attestazione SOA per l'esecuzione di lavori pubblici. Garanzia di qualità e sicurezza."/>
+                  content="Sartorello Escavazioni possiede le certificazioni ISO 9001 (Qualità), ISO 14001 (Ambiente), ISO 45001 (Sicurezza) e l'attestazione SOA per l'esecuzione di lavori pubblici. Scopri tutte le nostre garanzie."/>
+
             <ServicesBar />
 
             <PageHeader
-                title="Certificazioni"
-                subtitle="Per assicurare ai nostri clienti un servizio sempre più efficiente, l’Azienda adotta un sistema di qualità UNI EN ISO 9001:2015 prevedendo un costante sviluppo e miglioramento delle attività produttive e di controllo delle lavorazioni."
+                title="Le Nostre Certificazioni"
+                subtitle="Per assicurare un servizio sempre più efficiente, l’Azienda adotta un sistema di gestione integrato per Qualità (ISO 9001), Ambiente (ISO 14001) e Sicurezza (ISO 45001), garantendo un costante miglioramento delle attività."
             />
             <CertificationsList/>
             <QualityStandards/>
