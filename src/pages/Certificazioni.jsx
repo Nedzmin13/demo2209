@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from '../components/PageHeader';
 import CertificationsList from '../components/CertificationsList';
 import QualityStandards from '../components/QualityStandards';
-import DownloadSection from '../components/DownloadSection';
+// import DownloadSection from '../components/DownloadSection';
 import { Title, Meta } from 'react-head';
 import ServicesBar from "../components/ServicesBar.jsx";
 
@@ -22,7 +22,7 @@ const Certificazioni = () => {
             />
             <CertificationsList/>
             <QualityStandards/>
-            <DownloadSection/>
+
         </>
     );
 };
