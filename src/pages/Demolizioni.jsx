@@ -10,12 +10,15 @@ const pageData = {
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183856/IMG-20221212-WA0004_adktax.webp",
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183857/3_cezpte.webp",
     "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183857/2_asi5af.webp",
+        "https://res.cloudinary.com/dyatobm6t/image/upload/v1780987435/Marted%C3%AC_17_xvkkjz.jpg",
+        "https://res.cloudinary.com/dyatobm6t/image/upload/v1780987434/Marted%C3%AC_10_cd6vwv.png"
     ],
     youtubeVideoIds: [
         "5Sx9EBF3Bc4",
         "B-Py3jKvm8Y",
         "iWK2gE5iTSg",
-        "6XJLVefiuy4"
+        "6XJLVefiuy4",
+        "CToOFefvpmY"
 
     ]
 };

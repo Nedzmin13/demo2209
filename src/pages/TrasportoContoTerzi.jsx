@@ -8,7 +8,8 @@ const pageData = {
     images: [
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183858/Progetto_senza_titolo_26_fwpclb.webp",
         "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183858/IMG_20220517_191303494_HDR_pvd3bw.webp",
-        "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183861/lavori-23_tqczqg.webp"
+        "https://res.cloudinary.com/dyatobm6t/image/upload/v1759183861/lavori-23_tqczqg.webp",
+        "https://res.cloudinary.com/dyatobm6t/image/upload/v1780987365/20250925_154926_1_zdcmxi.jpg"
     ],
     youtubeVideoIds: [
 
